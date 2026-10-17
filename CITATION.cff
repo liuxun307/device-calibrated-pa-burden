@@ -9,7 +9,7 @@ type: software
 version: 1.0.0
 date-released: 2026-10-17
 license: MIT
-repository-code: "https://github.com/<GITHUB-USERNAME>/device-calibrated-pa-burden"
+repository-code: "https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden"
 keywords:
   - physical activity
   - accelerometry

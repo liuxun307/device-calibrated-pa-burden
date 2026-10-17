@@ -36,6 +36,7 @@
 | `logs/` | ~7.8 MB | 本机运行痕迹（含绝对路径） | 每次运行自动生成 |
 | `tmp_probe/` `_smoketest/` | — | 临时探针 | 不需要 |
 | `manuscript/` | 236 KB | **未发表稿件**（摘要/正文/骨架），发表前不入公开库 | 见 §5 |
+| `manuscript/期刊推荐_目标刊评估_20261017.md` | — | 选刊决策记录（含内部权衡） | 定刊后按需删/留 |
 | `data/bop/文献传递*.md` · `索取全文邮件*` · `_bak_*` · `_intake_extract/` | — | 内部行政文档（文献传递申请、致信草稿） | 不需要 |
 | `00_完整研究方案.md` · `Module2_外部队列数据申请清单.md` · `data/bop/*入池裁定*.md` | — | 内部工作文档（含时间线、申请策略、本机工具链路径） | 不需要；方法细节已在 Methods 2.4 与 `data/bop/README.md` 公开说明 |
 
@@ -63,12 +64,31 @@ git ls-files | wc -l
 
 ```bash
 # 3) 在 GitHub 网页新建空仓库（不要勾选 README/LICENSE），然后：
-git remote add origin https://github.com/<GITHUB-USERNAME>/device-calibrated-pa-burden.git
+git remote add origin https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden.git
 git push -u origin main
 ```
 
-> **唯一待补信息：GitHub 用户名与仓库名**（本文件与 `CITATION.cff`、稿件 Data availability 三处需同步替换
-> `<GITHUB-USERNAME>` 与 `device-calibrated-pa-burden`）。
+> **账号与仓库地址已确定（2026-10-17）**：`liuxun-sj-hospital` / `device-calibrated-pa-burden`。
+> 已在 `CITATION.cff`、`manuscript/Title_Page_投稿用.md`、`manuscript/声明与补充材料_草稿_中英对照.md` 三处同步。
+> 首次 `push` 时请用 **Personal Access Token（PAT）作为密码**，不要输入 GitHub 登录密码（见 §4b）。
+
+## 4b. 首次 push 的认证方式（**不要用登录密码**）
+
+GitHub 自 2021-08 起已关闭 HTTPS 密码推送，`git push` 提示 `Password for 'https://...'` 时：
+**账号填 `liuxun-sj-hospital`，密码填 Personal Access Token（PAT）**，不是 GitHub 登录密码。
+
+① 网页右上头像 → Settings → Developer settings → Personal access tokens → **Tokens (classic)** →
+Generate new token → 勾选 `repo`（若仓库含 Actions 再加 `workflow`）→ 有效期建议 30 天 → 复制 `ghp_...`（只显示一次）。  
+② 推送：`git push -u origin main`，用户名 `liuxun-sj-hospital`，密码粘贴 PAT。  
+③ 提示 `remote: Support for password authentication was removed` = 第 ② 步填了登录密码，重来一次即可。  
+④ 推荐在**本仓库局部**保存凭据，避免写入全局：
+
+```bash
+git config --local credential.helper manager   # Windows 凭据管理器，之后只输一次
+```
+
+> ⚠️ **安全约定**：PAT 与登录密码一律**不写进任何文件**（本仓库会公开），也不写进 `.git/config` 明文。
+> 若凭据曾出现在聊天/文档/截图里，**用完即 revoke**（同一页面 Delete）。建议另为仓库启用 2FA。
 
 ## 5. 发表后再补的两件事
 
@@ -85,7 +105,7 @@ git push -u origin main
 | 单文件是否 < 100 MB（GitHub 硬限） | ✅ 最大 4.6 MB（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`） |
 | 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ 23.4 MB / 304 文件 |
 | 是否含绝对路径（`E:\` / `C:\Users`） | ⚠️ `output/manifest.csv` 与部分 CSV 的表头注释可能含本机路径 → 已在 `docs/` 说明；如需彻底清除可跑 `code/tools/` 的清理脚本后再提交 |
-| 是否含 API key / 凭证 | ✅ 无 |
+| 是否含 API key / 凭证 | ✅ 无（PAT 不入库，见 §4b） |
 | 是否含个体级可识别数据 | ✅ 无（NHANES 为去标识化公开数据，且未上传） |
 | 是否含期刊未发表稿件 | ✅ 已排除 `manuscript/` |
 | LICENSE / CITATION.cff 是否齐备 | ✅ MIT + CFF（5 位作者，2 位通讯） |
@@ -95,7 +115,7 @@ git push -u origin main
 稿件 Data availability 建议表述（英文）：
 
 > All derived datasets and the complete analysis code are available at
-> https://github.com/&lt;GITHUB-USERNAME&gt;/device-calibrated-pa-burden (archived at Zenodo, DOI: …).
+> https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden (archived at Zenodo, DOI: …).
 > NHANES 2011–2014 data are publicly available from CDC/NCHS; GBD 2023 estimates are available from the
 > GBD Results Tool (IHME). Raw third-party data are not redistributed.
 
