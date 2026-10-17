@@ -1,0 +1,3 @@
+wave,n_subjects,n_subj_raw,n_identical,mismatch_minutes,mismatch_sums,raw_total_counts,wide_total_counts,verdict
+C,7176,7176,7176,0,0,16052577596,16052577596,PASS 全文件逐人完全一致
+D,7455,7455,7455,0,0,24520528153,24520528153,PASS 全文件逐人完全一致

@@ -1,0 +1,233 @@
+========================================================================
+ 可复现性核验报告
+========================================================================
+生成时间 : 2026-10-16 22:39:54 
+运行 ID  : 20261016_223342 
+项目根   : E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计 
+总体结论 : PASS 
+统计     : PASS 199 / WARN 0 / FAIL 0 / INFO 2 （共 201 项）
+
+------------------------------------------------------------------------
+
+【A 环境】
+  [INFO] R 版本                               R version 4.5.2 (2025-10-31 ucrt)  (锁定基线: 4.5.2)
+  [PASS] locale (LC_CTYPE)                      English_United States.utf8
+  [PASS] 必需 R 包                           data.table, haven, tidyverse, survival, survey, splines, metafor
+  [INFO] 随机种子                           PA_SEED = 20261011；RNGkind = Mersenne-Twister/Inversion/Rejection
+  [PASS] SHA-256 支持                         digest 已安装
+  [PASS] Module 2 合成引擎                  真贝叶斯可用：brms 2.23.0 / rstan 2.32.7 / StanHeaders 2.32.10；Rtools45=D:/rtools45
+
+【B 原始数据】
+  [PASS] 指纹台账存在                     73 条记录
+  [PASS] ALQ_C.xpt                              335.39 KB  指纹一致
+  [PASS] ALQ_D.xpt                              337.58 KB  指纹一致
+  [PASS] ALQ_G.xpt                              440.78 KB  指纹一致
+  [PASS] ALQ_H.xpt                              464.92 KB  指纹一致
+  [PASS] BIOPRO_G.xpt                           1950.2 KB  指纹一致
+  [PASS] BIOPRO_H.xpt                           2077.9 KB  指纹一致
+  [PASS] BMX_C.xpt                              2491.3 KB  指纹一致
+  [PASS] BMX_D.xpt                              2103.3 KB  指纹一致
+  [PASS] BMX_G.xpt                              1901.1 KB  指纹一致
+  [PASS] BMX_H.xpt                              1997.6 KB  指纹一致
+  [PASS] BPX_C.xpt                              2264.9 KB  指纹一致
+  [PASS] BPX_D.xpt                              2181.1 KB  指纹一致
+  [PASS] BPX_G.xpt                              1974.2 KB  指纹一致
+  [PASS] BPX_H.xpt                              1767.2 KB  指纹一致
+  [PASS] DEMO_C.xpt                             3486.2 KB  指纹一致
+  [PASS] DEMO_D.xpt                             3483 KB  指纹一致
+  [PASS] DEMO_G.xpt                             3665.8 KB  指纹一致
+  [PASS] DEMO_H.xpt                             3743.4 KB  指纹一致
+  [PASS] DIQ_C.xpt                              1284.1 KB  指纹一致
+  [PASS] DIQ_D.xpt                              2768.1 KB  指纹一致
+  [PASS] DIQ_G.xpt                              3885.3 KB  指纹一致
+  [PASS] DIQ_H.xpt                              4129.8 KB  指纹一致
+  [PASS] DPQ_G.xpt                              484.84 KB  指纹一致
+  [PASS] DPQ_H.xpt                              511.41 KB  指纹一致
+  [PASS] DR1TOT_G.xpt                           12134 KB  指纹一致
+  [PASS] DR1TOT_H.xpt                           12903 KB  指纹一致
+  [PASS] GHB_G.xpt                              103.36 KB  指纹一致
+  [PASS] GHB_H.xpt                              110.08 KB  指纹一致
+  [PASS] HDL_G.xpt                              184.53 KB  指纹一致
+  [PASS] HDL_H.xpt                              195.55 KB  指纹一致
+  [PASS] HUQ_G.xpt                              764.3 KB  指纹一致
+  [PASS] HUQ_H.xpt                              797.03 KB  指纹一致
+  [PASS] MCQ_C.xpt                              11626 KB  指纹一致
+  [PASS] MCQ_D.xpt                              6842.3 KB  指纹一致
+  [PASS] MCQ_G.xpt                              6743.7 KB  指纹一致
+  [PASS] MCQ_H.xpt                              7264.9 KB  指纹一致
+  [PASS] NHANES_2003_2004_MORT_2019_PUBLIC.dat  484.1 KB  指纹一致
+  [PASS] NHANES_2005_2006_MORT_2019_PUBLIC.dat  494.9 KB  指纹一致
+  [PASS] NHANES_2011_2012_MORT_2019_PUBLIC.dat  464.43 KB  指纹一致
+  [PASS] NHANES_2013_2014_MORT_2019_PUBLIC.dat  482.68 KB  指纹一致
+  [PASS] PAQ_C.xpt                              1453.1 KB  指纹一致
+  [PASS] PAQ_D.xpt                              1475.9 KB  指纹一致
+  [PASS] PAQ_G.xpt                              1497.7 KB  指纹一致
+  [PASS] PAQ_H.xpt                              7126.9 KB  指纹一致
+  [PASS] PAXDAY_G.xpt                           6334.7 KB  指纹一致
+  [PASS] PAXDAY_H.xpt                           7147.3 KB  指纹一致
+  [PASS] PAXHD_G.xpt                            376.25 KB  指纹一致
+  [PASS] PAXHD_H.xpt                            428.52 KB  指纹一致
+  [PASS] PAXHR_G.xpt                            125182 KB  指纹一致
+  [PASS] PAXHR_H.xpt                            141361 KB  指纹一致
+  [PASS] RXQ_RX_G.xpt                           2924.2 KB  指纹一致
+  [PASS] RXQ_RX_H.xpt                           9665.7 KB  指纹一致
+  [PASS] R_ReadInProgramAllSurveys.R            8.9316 KB  指纹一致
+  [PASS] SLQ_G.xpt                              194.22 KB  指纹一致
+  [PASS] SLQ_H.xpt                              203.28 KB  指纹一致
+  [PASS] SMQ_C.xpt                              1887 KB  指纹一致
+  [PASS] SMQ_D.xpt                              2518.4 KB  指纹一致
+  [PASS] SMQ_G.xpt                              1901.3 KB  指纹一致
+  [PASS] SMQ_H.xpt                              2119.1 KB  指纹一致
+  [PASS] TRIGLY_G.xpt                           153.44 KB  指纹一致
+  [PASS] TRIGLY_H.xpt                           157.66 KB  指纹一致
+  [PASS] pam_2003_2006/PAXRAW_C.zip             417523 KB  指纹一致
+  [PASS] pam_2003_2006/PAXRAW_D.zip             459951 KB  指纹一致
+  [PASS] rnhanesdata_ref/Covariate_C.rda        172.11 KB  指纹一致
+  [PASS] rnhanesdata_ref/Covariate_D.rda        169.82 KB  指纹一致
+  [PASS] rnhanesdata_ref/Flags_C.rda            551.35 KB  指纹一致
+  [PASS] rnhanesdata_ref/Flags_D.rda            572 KB  指纹一致
+  [PASS] rnhanesdata_ref/Mortality_2011_C.rda   26.809 KB  指纹一致
+  [PASS] rnhanesdata_ref/Mortality_2011_D.rda   24.977 KB  指纹一致
+  [PASS] rnhanesdata_ref/Mortality_2015_C.rda   23.195 KB  指纹一致
+  [PASS] rnhanesdata_ref/Mortality_2015_D.rda   22.227 KB  指纹一致
+  [PASS] rnhanesdata_ref/PAXINTEN_C.rda         41825 KB  指纹一致
+  [PASS] rnhanesdata_ref/PAXINTEN_D.rda         43573 KB  指纹一致
+
+【C 中间数据】
+  [PASS] accel_daily.rds                        存在；行数 13027
+  [PASS] analytic.rds                           存在；行数 7854
+  [PASS] MORT_2011_2014.rds                     存在；行数 19931
+  [PASS] pam_2003_2006.rds                      存在；行数 5890
+  [PASS] MORT_2003_2006.rds                     存在；行数 20470
+  [PASS] pam_hip_wearvariants.rds               存在；行数 9011
+  [PASS] wrist_criterion_variants.rds           存在；行数 8670
+  [PASS] Module 2 门禁                        QC_bop_status.csv：18 项，FAIL/MISSING 0 / WARN 2
+  [PASS] Module 2 引擎一致                  拟合 = 主分析 bayesian_multilevel_meta_regression(brms 2.23.0/rstan 2.32.7; 4 chains x 2000 iter)（21；合成引擎 = brms 2.23.0 / rstan 2.32.7 / StanHeaders 2.32.10；4 chains × 2000 iter（
+
+【D 交付产出】
+  [PASS] Fig3_dose_response.png                 365.04 KB
+  [PASS] Fig3_dose_response.pdf                 43.048 KB
+  [PASS] rr_curves.csv                          35.068 KB
+  [PASS] Table2_quartile_HK.csv                 0.11426 KB
+  [PASS] Table3_calibration.txt                 1.0059 KB
+  [PASS] Table2_reference_anchor.csv            0.089844 KB
+  [PASS] Fig3_reference_points.csv              0.74805 KB
+  [PASS] Fig3a_mims_all_cause.pdf               31.859 KB
+  [PASS] Fig3a_mims_all_cause.png               55.469 KB
+  [PASS] Fig3b_mims_cvd.pdf                     32.27 KB
+  [PASS] Fig3b_mims_cvd.png                     54.121 KB
+  [PASS] Fig3c_peak30_all_cause.pdf             29.101 KB
+  [PASS] Fig3c_peak30_all_cause.png             81.754 KB
+  [PASS] Fig3d_peak30_cvd.pdf                   27.573 KB
+  [PASS] Fig3d_peak30_cvd.png                   72.168 KB
+  [PASS] Fig3e_mvpa_all_cause.pdf               29.066 KB
+  [PASS] Fig3e_mvpa_all_cause.png               76.667 KB
+  [PASS] Fig3f_mvpa_cvd.pdf                     28.872 KB
+  [PASS] Fig3f_mvpa_cvd.png                     74.707 KB
+  [PASS] Table11_pam_intensity_RR.csv           14.741 KB
+  [PASS] Table11_pam_intensity_quartiles.csv    6.042 KB
+  [PASS] Table11_pam_intensity_per_IQR.csv      2.002 KB
+  [PASS] QC_pam_intensity_fit.csv               0.49414 KB
+  [PASS] PREVIEW_module3_totals.csv             8.8604 KB
+  [PASS] PREVIEW_module3_by_cause.csv           223.43 KB
+  [PASS] PREVIEW_module3_exposure_diag.csv      16.496 KB
+  [PASS] PREVIEW_module3_rr_source_compare.csv  9.9775 KB
+  [PASS] PREVIEW_module3_rr_bridge.csv          0.47656 KB
+  [PASS] PREVIEW_module3_s1p_totals.csv         9.2588 KB
+  [PASS] PREVIEW_module3_s1p_by_cause.csv       47.905 KB
+  [PASS] PREVIEW_module3_s1p_exposure_diag.csv  3.9902 KB
+  [PASS] PREVIEW_module3_s1p_rr_source_compare.csv 10.372 KB
+  [PASS] PREVIEW_module3_s1p_rr_bridge.csv      0.54688 KB
+  [PASS] Table14_sdi_anchor.csv                 20.431 KB
+  [PASS] M3_BYCOUNTRY_totals.csv                286.38 KB
+  [PASS] M3_BYCOUNTRY_by_cause.csv              2424.5 KB
+  [PASS] M3_BYCOUNTRY_exposure_diag.csv         111.39 KB
+  [PASS] M3_BYCOUNTRY_by_sdi.csv                4.8721 KB
+  [PASS] TableS4_burden_bycountry_manuscript.csv 34.271 KB
+  [PASS] Table3_sd_mean_relation_coefs.csv      1.6572 KB
+  [PASS] Table3_sd_mean_relation_cells.csv      8.0459 KB
+  [PASS] Table3_sd_mean_age_map.csv             0.76172 KB
+  [PASS] Table4_m3_decomp.csv                   30.634 KB
+  [PASS] Table5_m1_vs_m2.csv                    1.791 KB
+  [PASS] Table9_m3_scenario_summary.csv         2.249 KB
+  [PASS] Table10_m3_robustness.csv              11.684 KB
+  [PASS] Table10_m3_country_homogeneity.csv     1.2051 KB
+  [PASS] Fig5d_waterfall_decomposition.pdf      24.044 KB
+  [PASS] Fig5d_waterfall_decomposition.png      69.407 KB
+  [PASS] Fig5d_waterfall_by_region.pdf          36.184 KB
+  [PASS] Fig5d_waterfall_by_region.png          68.192 KB
+  [PASS] Fig5d_waterfall_data.csv               8.0332 KB
+  [PASS] Fig5d_waterfall_caption.md             2.8984 KB
+  [PASS] Table6_nhanes_hip_wrist_RR.csv         1.6064 KB
+  [PASS] Table6_pam_percentile_map.csv          1.2139 KB
+  [PASS] QC_pam_site_fit.csv                    0.29199 KB
+  [PASS] QC_pam_2003_2006.csv                   1.0186 KB
+  [PASS] QC_paxinten_vs_raw.csv                 0.26562 KB
+  [PASS] Table7_bop_nhanes_site_sensitivity.csv 4.1123 KB
+  [PASS] Table7_bop_nhanes_pooled_curve.csv     3.0752 KB
+  [PASS] Table7_bop_nhanes_weight_share.csv     0.28809 KB
+  [PASS] QC_bop_nhanes_sensitivity.csv          1.2129 KB
+  [PASS] Table8_hip_wear_rule_curves.csv        8.9629 KB
+  [PASS] Table8_wrist_criterion_curves.csv      7.377 KB
+  [PASS] Table8_site_ratio_matrix.csv           48.399 KB
+  [PASS] Table8_site_ratio_summary.csv          7.5107 KB
+  [PASS] Table8_metric_axis_check.csv           0.29883 KB
+  [PASS] QC_hip_wear_rules.csv                  0.25195 KB
+  [PASS] QC_hip_wear_rules_analytic.csv         0.29785 KB
+  [PASS] QC_hip_wear_R0_equivalence.csv         0.27441 KB
+  [PASS] QC_wrist_criteria.csv                  0.35449 KB
+  [PASS] QC_wrist_criteria_analytic.csv         0.24707 KB
+  [PASS] QC_wrist_day_qc.csv                    0.078125 KB
+  [PASS] QC_wrist_C0_equivalence.csv            0.26465 KB
+  [PASS] QC_site_wear_sensitivity.csv           1.877 KB
+  [PASS] QC_site_R0C0_equivalence.csv           0.38965 KB
+  [PASS] Table8_lit_site_contrast.csv           0.49219 KB
+  [PASS] Table8_lit_site_compatibility.csv      0.96777 KB
+  [PASS] Table8_lit_site_leverage.csv           0.57812 KB
+  [PASS] Table8_lit_design_incompat.csv         0.81934 KB
+  [PASS] QC_lit_site_contrast.txt               2.1152 KB
+  [PASS] Table8_lit_site_metric_license.csv     2.165 KB
+  [PASS] Table8b_site_anchor_totalPA.csv        0.70117 KB
+  [PASS] Table8b_site_anchor_slopes.csv         0.62207 KB
+  [PASS] Table8b_site_metric_compare.csv        2.5986 KB
+  [PASS] Table8b_site_anchor_vs_nhanes.csv      0.62402 KB
+  [PASS] QC_site_anchor_totalPA.txt             5.8555 KB
+  [PASS] QC_site_anchor_license_xcheck.csv      0.82812 KB
+  [PASS] QC_bop_intake.csv                      0.4668 KB
+  [PASS] Table12_bop_loo_RR.csv                 1.6963 KB
+  [PASS] Table12_m3_loo_paf.csv                 3.4941 KB
+  [PASS] Table13_evalues.csv                    7.6729 KB
+  [PASS] Fig6a_scenario_forest.pdf              34.181 KB
+  [PASS] Fig6a_scenario_forest.png              144.21 KB
+  [PASS] Fig6b_leave_one_out.pdf                34.244 KB
+  [PASS] Fig6b_leave_one_out.png                79.717 KB
+  [PASS] Fig6c_evalue.pdf                       34.21 KB
+  [PASS] Fig6c_evalue.png                       89.235 KB
+  [PASS] CAPTIONS_figures_tables.md             74.76 KB
+  [PASS] manifest.csv                           324 条记录
+  [PASS] manifest 字节一致性               全部与清单一致（已按自指规则排除元产物 3 个）
+
+【D 交付产出（按需敏感性）】
+  [PASS] Table7_bop_nhanes_paf_impact.csv       5.7793 KB
+  [PASS] Table7_bop_nhanes_paf_impact_by_cause.csv 0.62109 KB
+  [PASS] QC_95_env_override_invariance.csv      0.27734 KB
+  [PASS] PREVIEW_NHANES_s1p_totals.csv          9.6084 KB
+  [PASS] PREVIEW_NHANES_s1p_by_cause.csv        50.649 KB
+  [PASS] PREVIEW_NHANES_s1p_exposure_diag.csv   3.9961 KB
+  [PASS] PREVIEW_NHANES_s1p_rr_source_compare.csv 10.722 KB
+  [PASS] PREVIEW_NHANES_s1p_rr_bridge.csv       0.54688 KB
+  [PASS] VERIFY_default_totals.csv              8.5596 KB
+  [PASS] VERIFY_default_by_cause.csv            209.81 KB
+
+【E 跨运行】
+  [PASS] 产物指纹比对                     对照 20261016_220245：一致 309，不一致 0；已豁免预期差异 14（PDF 时间戳 11 + 元产物自指 3 + 文档 0 + RDS 内容一致 0）；新增 1，消失 0
+
+------------------------------------------------------------------------
+判据说明：
+  PASS  该项通过
+  WARN  不阻断，但需人工确认（如指纹漂移、清单字节不符）
+  FAIL  阻断：原始数据缺失/指纹不符/必需包缺失/中文路径不可用
+  INFO  仅记录，不参与判定
+
+复现判定要点：B 层全部 PASS 表示你手上的原始数据与作者完全一致；
+E 层 PASS 表示在相同原始数据与代码下，产物指纹可逐字节复现。

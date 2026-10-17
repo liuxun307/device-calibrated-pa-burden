@@ -1,0 +1,4 @@
+metric_definition,offset,hip_studies,wrist_studies,rr_hip,rr_wrist,ratio_wrist_over_hip,ratio_lo,ratio_hi,p_value
+LPA,25,Ekelund2019_harmonised,UKB_wrist_general,0.6,0.82,1.36666666666667,1.15628510127761,1.6153263375218,0.000249700743498622
+LPA,50,Ekelund2019_harmonised,UKB_wrist_general,0.44,0.75,1.70454545454545,1.40392606120962,2.06953577320747,7.15846794945365e-08
+LPA,75,Ekelund2019_harmonised,UKB_wrist_general,0.38,0.77,2.02631578947368,1.4620911577729,2.80827611660321,2.2220008508455e-05

@@ -1,0 +1,202 @@
+layer,item,status,detail
+A 环境,R 版本,INFO,R version 4.5.2 (2025-10-31 ucrt)  (锁定基线: 4.5.2)
+A 环境,locale (LC_CTYPE),PASS,English_United States.utf8
+A 环境,必需 R 包,PASS,"data.table, haven, tidyverse, survival, survey, splines, metafor"
+A 环境,随机种子,INFO,PA_SEED = 20261011；RNGkind = Mersenne-Twister/Inversion/Rejection
+A 环境,SHA-256 支持,PASS,digest 已安装
+A 环境,Module 2 合成引擎,PASS,真贝叶斯可用：brms 2.23.0 / rstan 2.32.7 / StanHeaders 2.32.10；Rtools45=D:/rtools45
+B 原始数据,指纹台账存在,PASS,73 条记录
+B 原始数据,ALQ_C.xpt,PASS,335.39 KB  指纹一致
+B 原始数据,ALQ_D.xpt,PASS,337.58 KB  指纹一致
+B 原始数据,ALQ_G.xpt,PASS,440.78 KB  指纹一致
+B 原始数据,ALQ_H.xpt,PASS,464.92 KB  指纹一致
+B 原始数据,BIOPRO_G.xpt,PASS,1950.2 KB  指纹一致
+B 原始数据,BIOPRO_H.xpt,PASS,2077.9 KB  指纹一致
+B 原始数据,BMX_C.xpt,PASS,2491.3 KB  指纹一致
+B 原始数据,BMX_D.xpt,PASS,2103.3 KB  指纹一致
+B 原始数据,BMX_G.xpt,PASS,1901.1 KB  指纹一致
+B 原始数据,BMX_H.xpt,PASS,1997.6 KB  指纹一致
+B 原始数据,BPX_C.xpt,PASS,2264.9 KB  指纹一致
+B 原始数据,BPX_D.xpt,PASS,2181.1 KB  指纹一致
+B 原始数据,BPX_G.xpt,PASS,1974.2 KB  指纹一致
+B 原始数据,BPX_H.xpt,PASS,1767.2 KB  指纹一致
+B 原始数据,DEMO_C.xpt,PASS,3486.2 KB  指纹一致
+B 原始数据,DEMO_D.xpt,PASS,3483 KB  指纹一致
+B 原始数据,DEMO_G.xpt,PASS,3665.8 KB  指纹一致
+B 原始数据,DEMO_H.xpt,PASS,3743.4 KB  指纹一致
+B 原始数据,DIQ_C.xpt,PASS,1284.1 KB  指纹一致
+B 原始数据,DIQ_D.xpt,PASS,2768.1 KB  指纹一致
+B 原始数据,DIQ_G.xpt,PASS,3885.3 KB  指纹一致
+B 原始数据,DIQ_H.xpt,PASS,4129.8 KB  指纹一致
+B 原始数据,DPQ_G.xpt,PASS,484.84 KB  指纹一致
+B 原始数据,DPQ_H.xpt,PASS,511.41 KB  指纹一致
+B 原始数据,DR1TOT_G.xpt,PASS,12134 KB  指纹一致
+B 原始数据,DR1TOT_H.xpt,PASS,12903 KB  指纹一致
+B 原始数据,GHB_G.xpt,PASS,103.36 KB  指纹一致
+B 原始数据,GHB_H.xpt,PASS,110.08 KB  指纹一致
+B 原始数据,HDL_G.xpt,PASS,184.53 KB  指纹一致
+B 原始数据,HDL_H.xpt,PASS,195.55 KB  指纹一致
+B 原始数据,HUQ_G.xpt,PASS,764.3 KB  指纹一致
+B 原始数据,HUQ_H.xpt,PASS,797.03 KB  指纹一致
+B 原始数据,MCQ_C.xpt,PASS,11626 KB  指纹一致
+B 原始数据,MCQ_D.xpt,PASS,6842.3 KB  指纹一致
+B 原始数据,MCQ_G.xpt,PASS,6743.7 KB  指纹一致
+B 原始数据,MCQ_H.xpt,PASS,7264.9 KB  指纹一致
+B 原始数据,NHANES_2003_2004_MORT_2019_PUBLIC.dat,PASS,484.1 KB  指纹一致
+B 原始数据,NHANES_2005_2006_MORT_2019_PUBLIC.dat,PASS,494.9 KB  指纹一致
+B 原始数据,NHANES_2011_2012_MORT_2019_PUBLIC.dat,PASS,464.43 KB  指纹一致
+B 原始数据,NHANES_2013_2014_MORT_2019_PUBLIC.dat,PASS,482.68 KB  指纹一致
+B 原始数据,PAQ_C.xpt,PASS,1453.1 KB  指纹一致
+B 原始数据,PAQ_D.xpt,PASS,1475.9 KB  指纹一致
+B 原始数据,PAQ_G.xpt,PASS,1497.7 KB  指纹一致
+B 原始数据,PAQ_H.xpt,PASS,7126.9 KB  指纹一致
+B 原始数据,PAXDAY_G.xpt,PASS,6334.7 KB  指纹一致
+B 原始数据,PAXDAY_H.xpt,PASS,7147.3 KB  指纹一致
+B 原始数据,PAXHD_G.xpt,PASS,376.25 KB  指纹一致
+B 原始数据,PAXHD_H.xpt,PASS,428.52 KB  指纹一致
+B 原始数据,PAXHR_G.xpt,PASS,125182 KB  指纹一致
+B 原始数据,PAXHR_H.xpt,PASS,141361 KB  指纹一致
+B 原始数据,RXQ_RX_G.xpt,PASS,2924.2 KB  指纹一致
+B 原始数据,RXQ_RX_H.xpt,PASS,9665.7 KB  指纹一致
+B 原始数据,R_ReadInProgramAllSurveys.R,PASS,8.9316 KB  指纹一致
+B 原始数据,SLQ_G.xpt,PASS,194.22 KB  指纹一致
+B 原始数据,SLQ_H.xpt,PASS,203.28 KB  指纹一致
+B 原始数据,SMQ_C.xpt,PASS,1887 KB  指纹一致
+B 原始数据,SMQ_D.xpt,PASS,2518.4 KB  指纹一致
+B 原始数据,SMQ_G.xpt,PASS,1901.3 KB  指纹一致
+B 原始数据,SMQ_H.xpt,PASS,2119.1 KB  指纹一致
+B 原始数据,TRIGLY_G.xpt,PASS,153.44 KB  指纹一致
+B 原始数据,TRIGLY_H.xpt,PASS,157.66 KB  指纹一致
+B 原始数据,pam_2003_2006/PAXRAW_C.zip,PASS,417523 KB  指纹一致
+B 原始数据,pam_2003_2006/PAXRAW_D.zip,PASS,459951 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Covariate_C.rda,PASS,172.11 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Covariate_D.rda,PASS,169.82 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Flags_C.rda,PASS,551.35 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Flags_D.rda,PASS,572 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Mortality_2011_C.rda,PASS,26.809 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Mortality_2011_D.rda,PASS,24.977 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Mortality_2015_C.rda,PASS,23.195 KB  指纹一致
+B 原始数据,rnhanesdata_ref/Mortality_2015_D.rda,PASS,22.227 KB  指纹一致
+B 原始数据,rnhanesdata_ref/PAXINTEN_C.rda,PASS,41825 KB  指纹一致
+B 原始数据,rnhanesdata_ref/PAXINTEN_D.rda,PASS,43573 KB  指纹一致
+C 中间数据,accel_daily.rds,PASS,存在；行数 13027
+C 中间数据,analytic.rds,PASS,存在；行数 7854
+C 中间数据,MORT_2011_2014.rds,PASS,存在；行数 19931
+C 中间数据,pam_2003_2006.rds,PASS,存在；行数 5890
+C 中间数据,MORT_2003_2006.rds,PASS,存在；行数 20470
+C 中间数据,pam_hip_wearvariants.rds,PASS,存在；行数 9011
+C 中间数据,wrist_criterion_variants.rds,PASS,存在；行数 8670
+C 中间数据,Module 2 门禁,PASS,QC_bop_status.csv：18 项，FAIL/MISSING 0 / WARN 2
+C 中间数据,Module 2 引擎一致,PASS,拟合 = 主分析 bayesian_multilevel_meta_regression(brms 2.23.0/rstan 2.32.7; 4 chains x 2000 iter)（21；合成引擎 = brms 2.23.0 / rstan 2.32.7 / StanHeaders 2.32.10；4 chains × 2000 iter（
+D 交付产出,Fig3_dose_response.png,PASS,365.04 KB
+D 交付产出,Fig3_dose_response.pdf,PASS,43.048 KB
+D 交付产出,rr_curves.csv,PASS,35.068 KB
+D 交付产出,Table2_quartile_HK.csv,PASS,0.11426 KB
+D 交付产出,Table3_calibration.txt,PASS,1.0059 KB
+D 交付产出,Table2_reference_anchor.csv,PASS,0.089844 KB
+D 交付产出,Fig3_reference_points.csv,PASS,0.74805 KB
+D 交付产出,Fig3a_mims_all_cause.pdf,PASS,31.859 KB
+D 交付产出,Fig3a_mims_all_cause.png,PASS,55.469 KB
+D 交付产出,Fig3b_mims_cvd.pdf,PASS,32.27 KB
+D 交付产出,Fig3b_mims_cvd.png,PASS,54.121 KB
+D 交付产出,Fig3c_peak30_all_cause.pdf,PASS,29.101 KB
+D 交付产出,Fig3c_peak30_all_cause.png,PASS,81.754 KB
+D 交付产出,Fig3d_peak30_cvd.pdf,PASS,27.573 KB
+D 交付产出,Fig3d_peak30_cvd.png,PASS,72.168 KB
+D 交付产出,Fig3e_mvpa_all_cause.pdf,PASS,29.066 KB
+D 交付产出,Fig3e_mvpa_all_cause.png,PASS,76.667 KB
+D 交付产出,Fig3f_mvpa_cvd.pdf,PASS,28.872 KB
+D 交付产出,Fig3f_mvpa_cvd.png,PASS,74.707 KB
+D 交付产出,Table11_pam_intensity_RR.csv,PASS,14.741 KB
+D 交付产出,Table11_pam_intensity_quartiles.csv,PASS,6.042 KB
+D 交付产出,Table11_pam_intensity_per_IQR.csv,PASS,2.002 KB
+D 交付产出,QC_pam_intensity_fit.csv,PASS,0.49414 KB
+D 交付产出,PREVIEW_module3_totals.csv,PASS,8.8604 KB
+D 交付产出,PREVIEW_module3_by_cause.csv,PASS,223.43 KB
+D 交付产出,PREVIEW_module3_exposure_diag.csv,PASS,16.496 KB
+D 交付产出,PREVIEW_module3_rr_source_compare.csv,PASS,9.9775 KB
+D 交付产出,PREVIEW_module3_rr_bridge.csv,PASS,0.47656 KB
+D 交付产出,PREVIEW_module3_s1p_totals.csv,PASS,9.2588 KB
+D 交付产出,PREVIEW_module3_s1p_by_cause.csv,PASS,47.905 KB
+D 交付产出,PREVIEW_module3_s1p_exposure_diag.csv,PASS,3.9902 KB
+D 交付产出,PREVIEW_module3_s1p_rr_source_compare.csv,PASS,10.372 KB
+D 交付产出,PREVIEW_module3_s1p_rr_bridge.csv,PASS,0.54688 KB
+D 交付产出,Table14_sdi_anchor.csv,PASS,20.431 KB
+D 交付产出,M3_BYCOUNTRY_totals.csv,PASS,286.38 KB
+D 交付产出,M3_BYCOUNTRY_by_cause.csv,PASS,2424.5 KB
+D 交付产出,M3_BYCOUNTRY_exposure_diag.csv,PASS,111.39 KB
+D 交付产出,M3_BYCOUNTRY_by_sdi.csv,PASS,4.8721 KB
+D 交付产出,TableS4_burden_bycountry_manuscript.csv,PASS,34.271 KB
+D 交付产出,Table3_sd_mean_relation_coefs.csv,PASS,1.6572 KB
+D 交付产出,Table3_sd_mean_relation_cells.csv,PASS,8.0459 KB
+D 交付产出,Table3_sd_mean_age_map.csv,PASS,0.76172 KB
+D 交付产出,Table4_m3_decomp.csv,PASS,30.634 KB
+D 交付产出,Table5_m1_vs_m2.csv,PASS,1.791 KB
+D 交付产出,Table9_m3_scenario_summary.csv,PASS,2.249 KB
+D 交付产出,Table10_m3_robustness.csv,PASS,11.684 KB
+D 交付产出,Table10_m3_country_homogeneity.csv,PASS,1.2051 KB
+D 交付产出,Fig5d_waterfall_decomposition.pdf,PASS,24.044 KB
+D 交付产出,Fig5d_waterfall_decomposition.png,PASS,69.407 KB
+D 交付产出,Fig5d_waterfall_by_region.pdf,PASS,36.184 KB
+D 交付产出,Fig5d_waterfall_by_region.png,PASS,68.192 KB
+D 交付产出,Fig5d_waterfall_data.csv,PASS,8.0332 KB
+D 交付产出,Fig5d_waterfall_caption.md,PASS,2.8984 KB
+D 交付产出,Table6_nhanes_hip_wrist_RR.csv,PASS,1.6064 KB
+D 交付产出,Table6_pam_percentile_map.csv,PASS,1.2139 KB
+D 交付产出,QC_pam_site_fit.csv,PASS,0.29199 KB
+D 交付产出,QC_pam_2003_2006.csv,PASS,1.0186 KB
+D 交付产出,QC_paxinten_vs_raw.csv,PASS,0.26562 KB
+D 交付产出,Table7_bop_nhanes_site_sensitivity.csv,PASS,4.1123 KB
+D 交付产出,Table7_bop_nhanes_pooled_curve.csv,PASS,3.0752 KB
+D 交付产出,Table7_bop_nhanes_weight_share.csv,PASS,0.28809 KB
+D 交付产出,QC_bop_nhanes_sensitivity.csv,PASS,1.2129 KB
+D 交付产出,Table8_hip_wear_rule_curves.csv,PASS,8.9629 KB
+D 交付产出,Table8_wrist_criterion_curves.csv,PASS,7.377 KB
+D 交付产出,Table8_site_ratio_matrix.csv,PASS,48.399 KB
+D 交付产出,Table8_site_ratio_summary.csv,PASS,7.5107 KB
+D 交付产出,Table8_metric_axis_check.csv,PASS,0.29883 KB
+D 交付产出,QC_hip_wear_rules.csv,PASS,0.25195 KB
+D 交付产出,QC_hip_wear_rules_analytic.csv,PASS,0.29785 KB
+D 交付产出,QC_hip_wear_R0_equivalence.csv,PASS,0.27441 KB
+D 交付产出,QC_wrist_criteria.csv,PASS,0.35449 KB
+D 交付产出,QC_wrist_criteria_analytic.csv,PASS,0.24707 KB
+D 交付产出,QC_wrist_day_qc.csv,PASS,0.078125 KB
+D 交付产出,QC_wrist_C0_equivalence.csv,PASS,0.26465 KB
+D 交付产出,QC_site_wear_sensitivity.csv,PASS,1.877 KB
+D 交付产出,QC_site_R0C0_equivalence.csv,PASS,0.38965 KB
+D 交付产出,Table8_lit_site_contrast.csv,PASS,0.49219 KB
+D 交付产出,Table8_lit_site_compatibility.csv,PASS,0.96777 KB
+D 交付产出,Table8_lit_site_leverage.csv,PASS,0.57812 KB
+D 交付产出,Table8_lit_design_incompat.csv,PASS,0.81934 KB
+D 交付产出,QC_lit_site_contrast.txt,PASS,2.1152 KB
+D 交付产出,Table8_lit_site_metric_license.csv,PASS,2.165 KB
+D 交付产出,Table8b_site_anchor_totalPA.csv,PASS,0.70117 KB
+D 交付产出,Table8b_site_anchor_slopes.csv,PASS,0.62207 KB
+D 交付产出,Table8b_site_metric_compare.csv,PASS,2.5986 KB
+D 交付产出,Table8b_site_anchor_vs_nhanes.csv,PASS,0.62402 KB
+D 交付产出,QC_site_anchor_totalPA.txt,PASS,5.8555 KB
+D 交付产出,QC_site_anchor_license_xcheck.csv,PASS,0.82812 KB
+D 交付产出,QC_bop_intake.csv,PASS,0.4668 KB
+D 交付产出,Table12_bop_loo_RR.csv,PASS,1.6963 KB
+D 交付产出,Table12_m3_loo_paf.csv,PASS,3.4941 KB
+D 交付产出,Table13_evalues.csv,PASS,7.6729 KB
+D 交付产出,Fig6a_scenario_forest.pdf,PASS,34.181 KB
+D 交付产出,Fig6a_scenario_forest.png,PASS,144.21 KB
+D 交付产出,Fig6b_leave_one_out.pdf,PASS,34.244 KB
+D 交付产出,Fig6b_leave_one_out.png,PASS,79.717 KB
+D 交付产出,Fig6c_evalue.pdf,PASS,34.21 KB
+D 交付产出,Fig6c_evalue.png,PASS,89.235 KB
+D 交付产出,CAPTIONS_figures_tables.md,PASS,74.76 KB
+D 交付产出（按需敏感性）,Table7_bop_nhanes_paf_impact.csv,PASS,5.7793 KB
+D 交付产出（按需敏感性）,Table7_bop_nhanes_paf_impact_by_cause.csv,PASS,0.62109 KB
+D 交付产出（按需敏感性）,QC_95_env_override_invariance.csv,PASS,0.27734 KB
+D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_totals.csv,PASS,9.6084 KB
+D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_by_cause.csv,PASS,50.649 KB
+D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_exposure_diag.csv,PASS,3.9961 KB
+D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_rr_source_compare.csv,PASS,10.722 KB
+D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_rr_bridge.csv,PASS,0.54688 KB
+D 交付产出（按需敏感性）,VERIFY_default_totals.csv,PASS,8.5596 KB
+D 交付产出（按需敏感性）,VERIFY_default_by_cause.csv,PASS,209.81 KB
+D 交付产出,manifest.csv,PASS,324 条记录
+D 交付产出,manifest 字节一致性,PASS,全部与清单一致（已按自指规则排除元产物 3 个）
+E 跨运行,产物指纹比对,PASS,对照 20261016_220245：一致 309，不一致 0；已豁免预期差异 14（PDF 时间戳 11 + 元产物自指 3 + 文档 0 + RDS 内容一致 0）；新增 1，消失 0

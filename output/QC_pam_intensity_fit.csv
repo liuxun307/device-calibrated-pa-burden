@@ -1,0 +1,11 @@
+item,value,note
+分析集人数,5890,""
+全因死亡,1545,""
+CVD 死亡（UCOD 1/5）,527,""
+UCOD 缺失（CVD 分析剔除）,,died==1 但 UCOD_LEADING 缺失者不进 CVD 模型
+peak-30 与总量 Pearson r,0.821,0.82 → 强度曲线大部分是体量曲线的复述，必须做 volume-adjusted
+peak-30 与总量 Spearman r,0.887,同上（秩相关）
+MVPA 与总量 Pearson r,0.886,""
+MVPA 与总量 Spearman r,0.888,""
+peak-30 加权中位数,2169,counts/min
+MVPA 加权中位数,16,min/day

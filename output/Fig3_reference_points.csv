@@ -1,0 +1,9 @@
+﻿exposure,outcome,ref_val,source
+mims_per_day,all_cause,13222.0729469188,TMREL_MID_MIMS (00_setup.R §7b)
+mims_per_day,cvd,13222.0729469188,TMREL_MID_MIMS (00_setup.R §7b)
+peak30_per_day,all_cause,1309.37067795808,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）
+peak30_per_day,cvd,1309.37067795808,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）
+mvpa_per_day,all_cause,2.66666666666667,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）
+mvpa_per_day,cvd,2.66666666666667,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）
+mvpa1952_per_day,all_cause,3,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）
+mvpa1952_per_day,cvd,3,04e: 加权 12.5 百分位（与 04b / BoP ref_canon 一致）

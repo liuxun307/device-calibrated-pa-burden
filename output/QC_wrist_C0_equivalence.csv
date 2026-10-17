@@ -1,0 +1,9 @@
+item,value
+analytic.rds 人数,7854
+本脚本 C0 人数,7854
+两侧共有 SEQN,7854
+仅 analytic 有,0
+仅本脚本有,0
+n_valid_days 最大相对偏差,0
+mims_per_day 最大相对偏差,0
+结论,PASS：C0 与 analytic.rds 逐值一致（相对偏差 < 1e-10）

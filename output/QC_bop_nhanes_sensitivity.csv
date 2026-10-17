@@ -1,0 +1,9 @@
+item,status,detail
+主池是否被修改,OK,rr_table.csv 未被本脚本写入；主分析 Table5_* 与 bop_rr_draws.rds 保持冻结
+敏感性池规模,OK,A=21 行/5 研究；B=37 行/7 研究；C=16 行/2 研究
+A 档复现 05a（对照基准）,PASS,A 档 device_pooled×total_PA @off80 RR=0.376381 vs 05a 主产物 0.376381；最大绝对偏差 5.551e-16；引擎 A=bayesian_multilevel_meta_regression(brms 2.23.0/rstan 2.32.7; 4 chains x 2000 iter)（同引擎是逐值复现的前提）
+total_PA 部位效应（B 档首次可估）,OK,"RR_hip/RR_wrist @off60 = 0.980 [0.794, 1.211], p=0.8440"
+LPA 部位效应（A 档=文献侧基准）,OK,"RR_hip/RR_wrist @off60 = 0.660 [0.488, 0.874], p=0.0055"
+并入 NHANES 对池化曲线的影响,OK,@off80 RR: A=0.3764 → B=0.4853（比值 1.290）；@off60 A=0.4805 → B=0.5815（比值 1.210）
+NHANES 在 B 档设备臂的固定效应权重占比,OK,device_hip=83%; device_mixed=0%; device_wrist=100%
+用途声明,WARN,NHANES 两臂**不得**并入主分析池：① 破坏 Module 2 的「外部文献」定位；② 随访 13-16 年 vs 池内 5-8 年，设计不可通约（衰减更强）；③ 权重约 4 倍 → 曲线被设计差异而非信息量拽平。仅作敏感性。

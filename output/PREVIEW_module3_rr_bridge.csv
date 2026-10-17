@@ -1,0 +1,7 @@
+location,year,cv,cv_mode,target_pct,mims_per_day,off_y,rr_pooled_relQ1,rr_abs_anchored,above_tmrel
+Global,2022,0.6,grid,10.3098542723457,8629,0,1,1.671,FALSE
+Global,2022,0.6,grid,24.3475825960053,10530,11.85,0.866,1.445,FALSE
+Global,2022,0.6,grid,50.1967149432177,12870,37.7,0.632,1.053,FALSE
+Global,2022,0.6,grid,74.5763471024215,15064,62.08,0.47,1,TRUE
+Global,2022,0.6,grid,89.8618507629655,17111,77.36,0.391,1,TRUE
+Global,2022,0.6,grid,94.7780898563805,18281,82.28,0.368,1,TRUE

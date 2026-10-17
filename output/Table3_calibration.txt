@@ -1,0 +1,25 @@
+
+Call:
+lm(formula = mims_per_day ~ splines::ns(met_min_wk, 3) + age * 
+    female, data = cal)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8743.1 -2318.3  -270.1  2012.6 22088.8 
+
+Coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                 16024.669    208.046  77.024  < 2e-16 ***
+splines::ns(met_min_wk, 3)1  3475.308    382.756   9.080  < 2e-16 ***
+splines::ns(met_min_wk, 3)2  3693.980    484.487   7.625 2.74e-14 ***
+splines::ns(met_min_wk, 3)3  1929.812   1074.328   1.796 0.072486 .  
+age                           -78.357      3.469 -22.590  < 2e-16 ***
+female                        964.847    259.665   3.716 0.000204 ***
+age:female                      2.734      4.737   0.577 0.563756    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3337 on 7847 degrees of freedom
+Multiple R-squared:  0.1913,	Adjusted R-squared:  0.1907 
+F-statistic: 309.5 on 6 and 7847 DF,  p-value: < 2.2e-16
+

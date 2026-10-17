@@ -1,0 +1,10 @@
+item,value
+03b 人数,5890
+本脚本 R0 人数,5890
+两侧共有 SEQN,5890
+仅 03b 有,0
+仅本脚本有,0
+n_valid_days 最大相对偏差,0
+counts_per_day 最大相对偏差,0
+wear_min 最大相对偏差,0
+结论,PASS：R0 与 03b 逐值一致（相对偏差 < 1e-10）

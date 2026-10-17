@@ -1,0 +1,29 @@
+layer,item,status,detail
+A 原文数值自洽,Moore2012 类别人数合计,PASS,"654,827 vs 原文 654,827"
+A 原文数值自洽,Moore2012 类别死亡数合计,PASS,"82,465 vs 原文 82,465"
+B 百分位复算,Moore2012 各类别百分位,PASS,最大偏差 0.0015 百分点（容差 0.02）
+B 百分位复算,Moore2012 参照百分位,PASS,表内 3.860 vs 复算 3.860（0 MET-h/wk 组的累计中点）
+B 百分位复算,Moore2012 HR 与原文一致,PASS,0.81 / 0.76 / 0.68 / 0.61 / 0.59
+B 百分位复算,百分位排序与原文类别边界一致,PASS,表内百分位升序 = 原文 exposure_orig_lo 升序
+B2 腕式来源,Sun2025 HR/CI 与原文一致,PASS,"0.82 [0.73, 0.93] / 0.75 [0.66, 0.85] / 0.77 [0.68, 0.88]"
+B2 腕式来源,Sun2025 百分位排序与原文边界一致,PASS,"中心 = 37.5,62.5,87.5；原文下界 = 3.9,5,6.1"
+B2 腕式来源,Sun2025 参照锚定（最低四分位）,PASS,参照中心 = 12.500（四分位构造应为 12.5）
+B2 腕式来源,Sun2025 源数据非单调性已登记,PASS,原文 Q4(0.77) > Q3(0.75) —— 必须在 notes 写明，否则会被误判为抽取错误
+B2 腕式来源,Sun2025 佩戴部位与人群标注,PASS,wear_site=wrist；population=general
+B2 腕式来源,Cao2024 HR/CI 与原文一致,PASS,"0.63 [0.51, 0.79]"
+B2 腕式来源,Cao2024 样本量与事件数,PASS,n=8024，死亡=691（原文 8024 / 691）
+B2 腕式来源,Cao2024 临床亚组已隔离,PASS,population=clinical_subgroup → 主分析排除，仅以 spec=sensitivity_all_populations 纳入
+B2 腕式来源,腕式来源同一队列（非独立）已登记,PASS,Sun2025 与 Cao2024 同为 UK Biobank、且 Cao2024 仅 1 行 → 二者不可当作独立证据
+C 结构,必需列齐备,PASS,14 列均在
+C 结构,HR 落在 95%CI 内,PASS,22 行全部满足 hr_lo ≤ hr ≤ hr_hi
+C 结构,每行严格在自身参照之上,PASS,全部 exposure_center > exposure_ref_center
+C 结构,同一来源同指标无重复暴露点,PASS,无重复
+C 结构,百分位推导口径已登记,PASS,by_construction_equal_share×15; equal_share_assumption×2; reported_category_counts×5
+C 结构,近似口径已在表内登记（来源级）,PASS,PURE2017：已登记
+D 方向单调,组内 HR 单调不升,WARN,8 组检查；非单调 1 处；最大回升 0.020 —— 属源文献自身报告的非单调（Sun2025 LPA Q4>Q3），已在 notes 登记
+D 方向单调,组内剂量-反应为负相关,PASS,Ekelund2019_harmonised/total_PA r=-0.993; Ekelund2019_harmonised/LPA r=-0.979; Ekelund2019_harmonised/MVPA r=-0.967; Tarp2024_harmonised/total_PA r=NA; Moore2012_nci_pool/MVPA r=-0.983; PURE2017_17countries/total_PA r=NA; UKB_wrist_general/LPA r=-0.686; UKB_wrist_CVD/LPA r=NA
+E arm 覆盖,同指标双方法可比（device vs self）,PASS,LPA: device 7 行 / self 0 行; MVPA: device 3 行 / self 5 行; total_PA: device 5 行 / self 2 行
+E arm 覆盖,髋式与腕式双覆盖（部位效应可估）,PASS,双覆盖指标：LPA（其余指标因**文献缺腕式来源**无法分离部位效应）
+E arm 覆盖,可比指标的行数充足性,WARN,"行数偏少（斜率稳健性受限）：total_PA(self=2, device=5)"
+E arm 覆盖,临床亚组未混入主分析,PASS,1 行 population=clinical_subgroup（Cao2024）→ 05a 主分析按 population=='general' 过滤，仅在敏感性中纳入
+E arm 覆盖,设备侧研究独立性,WARN,① Tarp2024（9 队列）与 Ekelund2019（8 队列）来自同一研究组且队列高度重叠；② Sun2025 与 Cao2024 同属 UK Biobank（后者且仅 1 行） → 设备侧研究**非独立**，随机效应会低估不确定性；Methods 必须声明并做留一敏感性

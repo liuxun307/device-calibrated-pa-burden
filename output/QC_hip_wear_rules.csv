@@ -1,0 +1,6 @@
+rule,n_valid_day,n_people_ge4days,median_wear_min,median_counts_day
+R0_choi2011,65777,10119,856,279868
+R1_anydata,95609,13658,1440,213400
+R2_signal_gt0,38759,5551,732,365561
+R3_no_zero_run60,66245,10185,862,279351
+R4_awake_signal,36305,5102,723,367887

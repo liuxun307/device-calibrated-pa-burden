@@ -1,0 +1,8 @@
+criterion,n,death,median_mims_day
+C0_wake600,7854,769,13078
+C1_allwear600,8237,855,12058
+C2_wake720,7299,647,13569
+C3_valid600_qual,8490,868,10632
+C4_allwear600_qual,8067,845,11906
+C5_allwear600_d6,7892,821,12099
+C6_allwear600_d7,2491,240,12862

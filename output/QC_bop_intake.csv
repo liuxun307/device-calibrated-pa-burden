@@ -1,0 +1,6 @@
+row_id,n_rules,n_pass,all_pass,intake_status,axis,category,verdict
+IE24_wrist_tot_T2,10,9,FALSE,rejected,total_PA,3,SKIP（人工标记不入表）
+IE24_wrist_tot_T3,10,9,FALSE,rejected,total_PA,3,SKIP（人工标记不入表）
+KO25_wrist_tot_Q2,10,9,FALSE,rejected,total_PA,4,SKIP（人工标记不入表）
+KO25_wrist_tot_Q3,10,9,FALSE,rejected,total_PA,4,SKIP（人工标记不入表）
+KO25_wrist_tot_Q4,10,9,FALSE,rejected,total_PA,4,SKIP（人工标记不入表）

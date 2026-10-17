@@ -1,0 +1,8 @@
+﻿term,estimate,se,p
+(Intercept),16024.67,208.05,<0.001
+"splines::ns(met_min_wk, 3)1",3475.31,382.76,<0.001
+"splines::ns(met_min_wk, 3)2",3693.98,484.49,<0.001
+"splines::ns(met_min_wk, 3)3",1929.81,1074.33,0.072
+age,-78.36,3.47,<0.001
+female,964.85,259.66,<0.001
+age:female,2.73,4.74,0.564

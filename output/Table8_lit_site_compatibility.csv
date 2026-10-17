@@ -1,0 +1,4 @@
+metric_definition,lit_metric,nhanes_metric,metric_aligned,comparability,offset,lit_ratio,lit_lo,lit_hi,nhanes_ratio,nhanes_lo,nhanes_hi,nhanes_value_on_grid,nhanes_ci_contains_lit_point,ci_overlap
+LPA,LPA,total_PA,FALSE,跨指标（文献 LPA vs NHANES total_PA）：由 §2b 的量化许可支撑（Table8_lit_site_metric_license.csv）,25,1.36666666666667,1.15628510127761,1.6153263375218,1.07522034297818,0.900943436409171,1.29900880247552,FALSE,FALSE,TRUE
+LPA,LPA,total_PA,FALSE,跨指标（文献 LPA vs NHANES total_PA）：由 §2b 的量化许可支撑（Table8_lit_site_metric_license.csv）,50,1.70454545454545,1.40392606120962,2.06953577320747,0.99344743331403,0.780103200704401,1.28271017151705,TRUE,FALSE,FALSE
+LPA,LPA,total_PA,FALSE,跨指标（文献 LPA vs NHANES total_PA）：由 §2b 的量化许可支撑（Table8_lit_site_metric_license.csv）,75,2.02631578947368,1.4620911577729,2.80827611660321,1.03380638759967,0.557337432441478,1.88312351969742,FALSE,FALSE,TRUE

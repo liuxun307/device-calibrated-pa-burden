@@ -1,0 +1,19 @@
+item,status,detail
+参照组锚点（逐行）,OK,各研究参照百分位：Ekelund2019_harmonised=12.50; Tarp2024_harmonised=16.67; Moore2012_nci_pool=3.86; PURE2017_17countries=16.67; UKB_wrist_general=12.50; UKB_wrist_CVD=12.50
+百分位推导口径,WARN,含 1 个等份额**假定**来源 → 须做敏感性：by_construction_equal_share / equal_share_assumption / reported_category_counts
+输入表,OK,22 行 / 6 来源 / 6 研究 / arm device_hip + device_mixed + device_wrist + self
+拟合,OK,主分析 bayesian_multilevel_meta_regression(brms 2.23.0/rstan 2.32.7; 4 chains x 2000 iter)（21 行 / 5 研究 / 7 组合）
+合成引擎,OK,"brms 2.23.0 / rstan 2.32.7 / StanHeaders 2.32.10；4 chains × 2000 iter（warmup 1000），cores=1（已由 4 自动降级：中文路径下 rstan 并行链会挂死），seed=20261011；先验：b ~ N(0, 0.5)、sd(study) ~ t(3, 0, 2.5)；抽样方差 = se²（se(sqrt(vi), sigma=FALSE)，固定，与 rma.mv(V=vi) 同模型）；Rtools45=D:/rtools45"
+后验诊断,OK,主分析：发散转移 0 次；斜率参数 max Rhat = 1.0025；后验抽样 4000 条（曲线池取 1000）；adapt_delta = 0.99
+研究数,OK,5 个研究（含方法学协变量的模型建议 ≥3）
+方法覆盖,OK,"主分析 arm：device_hip, device_mixed, device_wrist, self"
+佩戴部位覆盖,OK,hip 与 wrist 均有覆盖的指标：LPA；其余指标因**文献缺腕式来源**无法估部位效应
+拟合优度,WARN,观测点最大 |log 残差| = 0.398（RR 因子 1.49）→ Table5_bop_fit_diagnostic.csv
+RR 曲线集,OK,1000 条 × 190 行（arm 组合 133 + 设备合并 57）→ bop_rr_draws.rds
+方法效应,OK,"同指标内 device vs self：MVPA RR 比 1.025 [0.851, 1.221] @off60; total_PA RR 比 0.698 [0.542, 0.906] @off60"
+佩戴部位效应,OK,"同指标内 hip vs wrist（主分析）：LPA 髋/腕 RR 比 0.660 [0.488, 0.874], p=0.0055"
+曲率模型后验诊断,OK,共享曲率模型：发散转移 0 次；全部系数 max Rhat = 1.0042（阈值 1.02）
+曲率模型引擎,OK,bayesian_multilevel_meta_regression(brms 2.23.0/rstan 2.32.7; 4 chains x 2000 iter)
+曲率敏感性,OK,共享曲率后固定部分最大 |log 残差| 0.319（主分析 0.398 → 失拟减小，方向正确）；曲率项量级 0.135/off60（= 3.76e-05 每百分位²）；收敛=是 → Table5_bop_sensitivity_curvature.csv
+Module 3 可用性,READY,可替换 DRYRUN_S3 占位曲线（用 curve_role=='device_pooled' 行）
+临床亚组隔离,OK,主分析限一般人群（21 行）；另纳入临床亚组 1 行作敏感性（spec=sensitivity_all_populations）

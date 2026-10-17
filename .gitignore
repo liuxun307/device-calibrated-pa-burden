@@ -1,0 +1,54 @@
+# =============================================================================
+# .gitignore  ——  范式 A：低体力活动 → 加速度计
+# 策略：代码与"复现证据"必须提交；体积大且可由脚本重建的数据不提交。
+# =============================================================================
+
+# ---- 不提交：原始数据与中间缓存（体积大，01/02/03 可重建）----
+data/raw/
+data/derived/
+data/gbd/
+data/scratch/
+
+# ---- 不提交：运行日志（本机痕迹）----
+logs/
+
+# ---- 不提交：未发表稿件（接收后再放开）----
+manuscript/
+
+# ---- 不提交：临时沙箱与探测文件 ----
+_smoketest/
+tmp_probe/
+_probe.log
+*.log
+
+# ---- 不提交：data/bop 内部行政文档（文献传递申请、致信草稿、待入池备件）----
+data/bop/文献传递*
+data/bop/索取全文邮件*
+data/bop/_bak_*
+data/bop/_intake_extract/
+
+# ---- 不提交：内部工作文档（研究方案、数据申请计划、入池裁定记录）----
+00_完整研究方案.md
+Module2_外部队列数据申请清单.md
+data/bop/*入池裁定*.md
+
+# ---- 提交（显式保留，勿被上面规则覆盖）----
+!data/sources/
+!data/sources/**
+!data/README.md
+!data/RAW_INVENTORY.csv
+!output/manifest.csv
+!output/REPRODUCIBILITY_REPORT.txt
+
+# ---- R 会话产物 ----
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# ---- 系统与编辑器 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+*.swp

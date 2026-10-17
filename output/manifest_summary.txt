@@ -1,0 +1,107 @@
+产物清单摘要
+生成时间 : 2026-10-16 22:39:32 
+运行 ID  : 20261016_223342 
+项目根   : E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计 
+指纹算法 : sha256 
+
+     scope 文件数       体量
+    <char>  <int>     <char>
+1:     bop     13    0.25 MB
+2: derived     63   49.67 MB
+3:     gbd     31  162.80 MB
+4:  output    143    8.45 MB
+5:     raw     74 1363.55 MB
+
+--- 交付物（output）---
+                             rel_path   bytes  rows  cols             note
+                               <char>   <num> <int> <int>           <char>
+  1:       CAPTIONS_figures_tables.md   76554    NA    NA caption/说明文档
+  2:      DRYRUN_module3_by_cause.csv   23826   160    11        table/csv
+  3: DRYRUN_module3_exposure_diag.csv    2473    20     9        table/csv
+  4:        DRYRUN_module3_totals.csv    1075     4    16        table/csv
+  5:           Fig2a_flow_numbers.csv     138     4     4        table/csv
+ ---                                                                      
+139:                 bop_rr_draws.rds 1326027    NA    NA                 
+140:      bop_rr_draws_withNHANES.rds 1454824    NA    NA                 
+141:             manifest_summary.txt    5552    NA    NA                 
+142:  reported_vs_device_crosstab.csv     246    16     3        table/csv
+143:                    rr_curves.csv   35910   400     6        table/csv
+
+--- 原始数据（raw）---
+                                 rel_path     bytes
+                                   <char>     <num>
+ 1:                             ALQ_C.xpt    343440
+ 2:                             ALQ_D.xpt    345680
+ 3:                             ALQ_G.xpt    451360
+ 4:                             ALQ_H.xpt    476080
+ 5:                          BIOPRO_G.xpt   1997040
+ 6:                          BIOPRO_H.xpt   2127760
+ 7:                             BMX_C.xpt   2551120
+ 8:                             BMX_D.xpt   2153760
+ 9:                             BMX_G.xpt   1946720
+10:                             BMX_H.xpt   2045520
+11:                             BPX_C.xpt   2319280
+12:                             BPX_D.xpt   2233440
+13:                             BPX_G.xpt   2021600
+14:                             BPX_H.xpt   1809600
+15:                            DEMO_C.xpt   3569840
+16:                            DEMO_D.xpt   3566560
+17:                            DEMO_G.xpt   3753760
+18:                            DEMO_H.xpt   3833200
+19:                             DIQ_C.xpt   1314880
+20:                             DIQ_D.xpt   2834560
+21:                             DIQ_G.xpt   3978560
+22:                             DIQ_H.xpt   4228960
+23:                             DPQ_G.xpt    496480
+24:                             DPQ_H.xpt    523680
+25:                          DR1TOT_G.xpt  12424880
+26:                          DR1TOT_H.xpt  13212960
+27:                             GHB_G.xpt    105840
+28:                             GHB_H.xpt    112720
+29:                             HDL_G.xpt    188960
+30:                             HDL_H.xpt    200240
+31:                             HUQ_G.xpt    782640
+32:                             HUQ_H.xpt    816160
+33:                             MCQ_C.xpt  11904960
+34:                             MCQ_D.xpt   7006480
+35:                             MCQ_G.xpt   6905520
+36:                             MCQ_H.xpt   7439280
+37: NHANES_2003_2004_MORT_2019_PUBLIC.dat    495722
+38: NHANES_2005_2006_MORT_2019_PUBLIC.dat    506774
+39: NHANES_2011_2012_MORT_2019_PUBLIC.dat    475574
+40: NHANES_2013_2014_MORT_2019_PUBLIC.dat    494268
+41:                             PAQ_C.xpt   1488000
+42:                             PAQ_D.xpt   1511360
+43:                             PAQ_G.xpt   1533680
+44:                             PAQ_H.xpt   7297920
+45:                          PAXDAY_G.xpt   6486720
+46:                          PAXDAY_H.xpt   7318800
+47:                           PAXHD_G.xpt    385280
+48:                           PAXHD_H.xpt    438800
+49:                           PAXHR_G.xpt 128186160
+50:                           PAXHR_H.xpt 144753200
+51:                          PAXMIN_G.xpt   6549504
+52:                          RXQ_RX_G.xpt   2994400
+53:                          RXQ_RX_H.xpt   9897680
+54:           R_ReadInProgramAllSurveys.R      9146
+55:                             SLQ_G.xpt    198880
+56:                             SLQ_H.xpt    208160
+57:                             SMQ_C.xpt   1932320
+58:                             SMQ_D.xpt   2578880
+59:                             SMQ_G.xpt   1946960
+60:                             SMQ_H.xpt   2170000
+61:                          TRIGLY_G.xpt    157120
+62:                          TRIGLY_H.xpt    161440
+63:            pam_2003_2006/PAXRAW_C.zip 427543657
+64:            pam_2003_2006/PAXRAW_D.zip 470990068
+65:       rnhanesdata_ref/Covariate_C.rda    176236
+66:       rnhanesdata_ref/Covariate_D.rda    173892
+67:           rnhanesdata_ref/Flags_C.rda    564580
+68:           rnhanesdata_ref/Flags_D.rda    585728
+69:  rnhanesdata_ref/Mortality_2011_C.rda     27452
+70:  rnhanesdata_ref/Mortality_2011_D.rda     25576
+71:  rnhanesdata_ref/Mortality_2015_C.rda     23752
+72:  rnhanesdata_ref/Mortality_2015_D.rda     22760
+73:        rnhanesdata_ref/PAXINTEN_C.rda  42829304
+74:        rnhanesdata_ref/PAXINTEN_D.rda  44618520
+                                 rel_path     bytes

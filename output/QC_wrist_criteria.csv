@@ -1,0 +1,8 @@
+criterion,min_valid_days,n_valid_day,n_people,median_mims_day,median_wake_min
+C0_wake600,4,90080,13027,14468,904
+C1_allwear600,4,104908,13719,13322,845
+C2_wake720,4,81549,12219,14932,923
+C3_valid600_qual,4,105870,13915,11344,757
+C4_allwear600_qual,4,89273,12708,12823,837
+C5_allwear600_d6,6,104908,12989,13398,848
+C6_allwear600_d7,7,104908,4177,14222,892

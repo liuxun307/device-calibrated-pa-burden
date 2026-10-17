@@ -1,0 +1,9 @@
+﻿item,n,note
+"Device sample (aged >= 25, valid accelerometry)",7854,Table 1 的描述对象；= analytic.rds 全量（年龄 >= 25 且加速度计有效）
+Device sample with linked mortality follow-up,7842,其中 died / cvd_death / surv_mo 均非缺失者（其余行未链接到死亡随访）
+Deaths in the device sample,769,"未加权计数；**分母为有随访链接的 7,842 人**，非 7,854"
+Cox analysis set (complete covariates and follow-up),7007,Table 2 的拟合样本；Model 1 与 Model 2 共用同一完整案例集
+Deaths in the Cox analysis set,664,未加权计数，与 Table 1 的 Deaths 行同口径
+Cardiovascular deaths in the Cox analysis set,207,cvd_death（UCOD_LEADING 为 1 或 5，即心脏病或脑血管病）；主结局用全因死亡，此为次结局
+Median follow-up in the device sample (months),81,surv_mo（PERMTH_EXM）中位数；阶段 1 随访至 2019-12-31（IQR 见 Methods 2.1）
+Median follow-up in the Cox analysis set (months),81,阶段 2（完整案例集）的同一量；两段中位数相同（81.0 月 = 6.75 年）

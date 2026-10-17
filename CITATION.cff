@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this code or these derived results, please cite the repository (and the manuscript once published)."
+title: "Device-calibrated burden of low physical activity"
+abstract: >-
+  Analysis pipeline and derived results for a three-module recomputation of the GBD 2023
+  attributable burden of low physical activity using device-measured (accelerometer) exposure
+  instead of self-reported exposure.
+type: software
+version: 1.0.0
+date-released: 2026-10-17
+license: MIT
+repository-code: "https://github.com/<GITHUB-USERNAME>/device-calibrated-pa-burden"
+keywords:
+  - physical activity
+  - accelerometry
+  - global burden of disease
+  - population attributable fraction
+  - NHANES
+  - reproducibility
+authors:
+  - family-names: Zhang
+    given-names: Zhigang
+    affiliation: "Department of Emergency Medicine, Shengjing Hospital of China Medical University, Shenyang, China"
+  - family-names: Liu
+    given-names: Hongyu
+    affiliation: "Department of Emergency Medicine, Shengjing Hospital of China Medical University, Shenyang, China"
+  - family-names: Zhao
+    given-names: Zheng
+    affiliation: "Department of Emergency Medicine, Shengjing Hospital of China Medical University, Shenyang, China"
+  - family-names: Zhao
+    given-names: Yang
+    affiliation: "Department of General Surgery, Shengjing Hospital of China Medical University, Shenyang, China"
+    email: treezy@163.com
+    corresponding: true
+  - family-names: Liu
+    given-names: Xun
+    affiliation: "Department of General Surgery, Shengjing Hospital of China Medical University, Shenyang, China"
+    email: liuxun@sj-hospital.org
+    corresponding: true
+preferred-citation:
+  type: article
+  title: "Device-calibrated physical activity and global attributable burden: a three-module recomputation of GBD 2023"
+  authors:
+    - family-names: Zhang
+      given-names: Zhigang
+    - family-names: Liu
+      given-names: Hongyu
+    - family-names: Zhao
+      given-names: Zheng
+    - family-names: Zhao
+      given-names: Yang
+    - family-names: Liu
+      given-names: Xun
+  year: 2026
+  journal: "Manuscript in preparation"

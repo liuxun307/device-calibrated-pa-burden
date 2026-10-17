@@ -1,0 +1,4 @@
+arm,metric_definition,n_rows,n_rows_nhanes,wfix_total,wfix_nhanes_share,slope_B
+device_hip,total_PA,11,8,2898.995902707,0.831629679925019,-0.00925769433806474
+device_mixed,total_PA,2,0,859.244293373028,0,-0.00746991163472746
+device_wrist,total_PA,8,8,2068.64792381087,1,-0.00891670519908346

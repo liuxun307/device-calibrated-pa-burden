@@ -1,0 +1,64 @@
+cycle,year,comp,filename,url,category,required,min_bytes,purpose
+G,2011,DEMO,DEMO_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.xpt,core,TRUE,50000,"人口学/4年权重 WTMEC4YR/设计变量 SDMVPSU,SDMVSTRA"
+H,2013,DEMO,DEMO_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.xpt,core,TRUE,50000,同上
+G,2011,PAXDAY,PAXDAY_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXDAY_G.xpt,core,TRUE,1e+05,加速度计日级汇总：MIMS/day 主暴露
+H,2013,PAXDAY,PAXDAY_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAXDAY_H.xpt,core,TRUE,1e+05,同上
+G,2011,PAXHD,PAXHD_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHD_G.xpt,core,TRUE,3000,加速度计表头：佩戴/校准元数据
+H,2013,PAXHD,PAXHD_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAXHD_H.xpt,core,TRUE,3000,同上
+G,2011,PAQ,PAQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.xpt,core,TRUE,50000,自报体力活动（GPAQ 结构）→ MET-min/wk 校准锚
+H,2013,PAQ,PAQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.xpt,core,TRUE,50000,同上
+G,2011,BMX,BMX_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.xpt,covariate,TRUE,1e+05,BMI / 腰围
+H,2013,BMX,BMX_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.xpt,covariate,TRUE,1e+05,同上
+G,2011,BPX,BPX_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPX_G.xpt,covariate,TRUE,50000,血压
+H,2013,BPX,BPX_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPX_H.xpt,covariate,TRUE,50000,同上
+G,2011,BIOPRO,BIOPRO_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BIOPRO_G.xpt,covariate,TRUE,1e+05,生化（肌酐 LBXSCR 等）
+H,2013,BIOPRO,BIOPRO_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BIOPRO_H.xpt,covariate,TRUE,1e+05,同上
+G,2011,GHB,GHB_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/GHB_G.xpt,covariate,TRUE,30000,糖化血红蛋白 LBXGH
+H,2013,GHB,GHB_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GHB_H.xpt,covariate,TRUE,30000,同上
+G,2011,HDL,HDL_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HDL_G.xpt,covariate,TRUE,30000,HDL-C LBDHDD
+H,2013,HDL,HDL_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HDL_H.xpt,covariate,TRUE,30000,同上
+G,2011,TRIGLY,TRIGLY_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/TRIGLY_G.xpt,covariate,TRUE,30000,甘油三酯 LBXTR
+H,2013,TRIGLY,TRIGLY_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/TRIGLY_H.xpt,covariate,TRUE,30000,同上
+G,2011,SMQ,SMQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SMQ_G.xpt,covariate,TRUE,30000,吸烟 SMQ020/SMQ040
+H,2013,SMQ,SMQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SMQ_H.xpt,covariate,TRUE,30000,同上
+G,2011,ALQ,ALQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.xpt,covariate,TRUE,30000,饮酒 ALQ101
+H,2013,ALQ,ALQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.xpt,covariate,TRUE,30000,同上
+G,2011,DIQ,DIQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.xpt,covariate,TRUE,30000,糖尿病 DIQ010
+H,2013,DIQ,DIQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.xpt,covariate,TRUE,30000,同上
+G,2011,MCQ,MCQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/MCQ_G.xpt,covariate,TRUE,50000,合并症 MCQ160B/D/E/F
+H,2013,MCQ,MCQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/MCQ_H.xpt,covariate,TRUE,50000,同上
+G,2011,PAXHR,PAXHR_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHR_G.xpt,extended,FALSE,1e+05,小时级活动（日内节律）
+H,2013,PAXHR,PAXHR_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAXHR_H.xpt,extended,FALSE,1e+05,同上
+G,2011,SLQ,SLQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SLQ_G.xpt,extended,FALSE,20000,睡眠（敏感性分析）
+H,2013,SLQ,SLQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SLQ_H.xpt,extended,FALSE,20000,同上
+G,2011,DPQ,DPQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DPQ_G.xpt,extended,FALSE,20000,抑郁（阴性对照）
+H,2013,DPQ,DPQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DPQ_H.xpt,extended,FALSE,20000,同上
+G,2011,HUQ,HUQ_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HUQ_G.xpt,extended,FALSE,20000,医疗利用
+H,2013,HUQ,HUQ_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HUQ_H.xpt,extended,FALSE,20000,同上
+G,2011,RXQ_RX,RXQ_RX_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/RXQ_RX_G.xpt,extended,FALSE,1e+05,处方药（多重用药）
+H,2013,RXQ_RX,RXQ_RX_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/RXQ_RX_H.xpt,extended,FALSE,1e+05,同上
+G,2011,DR1TOT,DR1TOT_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.xpt,extended,FALSE,50000,24h 膳食 recall（HEI-2015）
+H,2013,DR1TOT,DR1TOT_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.xpt,extended,FALSE,50000,同上
+G,2011,PAXMIN,PAXMIN_G.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXMIN_G.xpt,huge,FALSE,1e+08,分钟级 MIMS（仅 MVPA/Peak-30 需要，约 300+ MB）
+H,2013,PAXMIN,PAXMIN_H.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAXMIN_H.xpt,huge,FALSE,1e+08,同上
+C,2003,DEMO,DEMO_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.xpt,pam_site,FALSE,2e+06,2003-2004 人口学/权重 WTMEC2YR/设计变量（与 G/H 同口径）
+D,2005,DEMO,DEMO_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.xpt,pam_site,FALSE,2e+06,2005-2006 同上
+C,2003,BMX,BMX_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.xpt,pam_site,FALSE,1e+06,BMI / 腰围
+D,2005,BMX,BMX_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BMX_D.xpt,pam_site,FALSE,1e+06,同上
+C,2003,BPX,BPX_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.xpt,pam_site,FALSE,1e+06,血压（sbp）
+D,2005,BPX,BPX_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPX_D.xpt,pam_site,FALSE,1e+06,同上
+C,2003,SMQ,SMQ_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.xpt,pam_site,FALSE,5e+05,吸烟 SMQ020/SMQ040
+D,2005,SMQ,SMQ_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/SMQ_D.xpt,pam_site,FALSE,5e+05,同上
+C,2003,ALQ,ALQ_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.xpt,pam_site,FALSE,2e+05,饮酒 ALQ101
+D,2005,ALQ,ALQ_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.xpt,pam_site,FALSE,2e+05,同上
+C,2003,DIQ,DIQ_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.xpt,pam_site,FALSE,5e+05,糖尿病 DIQ010
+D,2005,DIQ,DIQ_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DIQ_D.xpt,pam_site,FALSE,5e+05,同上
+C,2003,MCQ,MCQ_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/MCQ_C.xpt,pam_site,FALSE,2e+06,合并症 MCQ160B/D/E/F
+D,2005,MCQ,MCQ_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/MCQ_D.xpt,pam_site,FALSE,2e+06,同上
+C,2003,PAQ,PAQ_C.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAQ_C.xpt,pam_site,FALSE,5e+05,自报体力活动（GPAQ 结构）—— 供跨周期自报口径核对
+D,2005,PAQ,PAQ_D.xpt,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAQ_D.xpt,pam_site,FALSE,5e+05,同上
+G,2011,MORT,NHANES_2011_2012_MORT_2019_PUBLIC.dat,https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2011_2012_MORT_2019_PUBLIC.dat,mortality,TRUE,2e+05,公开版链接死亡文件（随访至 2019-12-31）：MORTSTAT/UCOD_LEADING/PERMTH_EXM
+H,2013,MORT,NHANES_2013_2014_MORT_2019_PUBLIC.dat,https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2013_2014_MORT_2019_PUBLIC.dat,mortality,TRUE,2e+05,公开版链接死亡文件（随访至 2019-12-31）：MORTSTAT/UCOD_LEADING/PERMTH_EXM
+C,2003,MORT,NHANES_2003_2004_MORT_2019_PUBLIC.dat,https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2003_2004_MORT_2019_PUBLIC.dat,mortality,FALSE,2e+05,公开版链接死亡文件（随访至 2019-12-31）：MORTSTAT/UCOD_LEADING/PERMTH_EXM
+D,2005,MORT,NHANES_2005_2006_MORT_2019_PUBLIC.dat,https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2005_2006_MORT_2019_PUBLIC.dat,mortality,FALSE,2e+05,公开版链接死亡文件（随访至 2019-12-31）：MORTSTAT/UCOD_LEADING/PERMTH_EXM
+-,,READIN,R_ReadInProgramAllSurveys.R,https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/R_ReadInProgramAllSurveys.R,provenance,TRUE,3000,NCHS 官方 LMF 读入程序（固定宽度布局的权威依据）

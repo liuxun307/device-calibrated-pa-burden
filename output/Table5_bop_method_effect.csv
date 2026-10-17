@@ -1,0 +1,3 @@
+metric_definition,arms_device,n_rows_device,n_rows_self,slope_device_pooled,slope_self,slope_diff,rr_ratio_at_off60,rr_ratio_lo,rr_ratio_hi,p_diff,note
+MVPA,device_hip,3,5,-0.00430234857987661,-0.00471867742551343,0.000416328845636815,1.02529433835445,0.851334739431056,1.22052528307378,0.7775,offset=0 时 RR 均为 1；offset=60 处 device（跨部位合并）的 RR ÷ self 的 RR
+total_PA,device_hip+device_mixed,5,2,-0.0122144097719436,-0.00621784682711748,-0.00599656294482615,0.697820218029031,0.54220058278692,0.90587048346281,0.01,offset=0 时 RR 均为 1；offset=60 处 device（跨部位合并）的 RR ÷ self 的 RR

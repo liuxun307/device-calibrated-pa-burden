@@ -1,0 +1,3 @@
+﻿metric,pct_weighted,n_unweighted,w_sum,threshold,threshold_unit
+"Meets WHO guideline (self-reported, weighted)",61.7123,7854,165220536.5,600,MET-min/wk
+"Below TMREL (device-measured, weighted)",51.1106,7854,165220536.5,13222.0729469188,MIMS/day

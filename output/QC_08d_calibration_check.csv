@@ -1,0 +1,9 @@
+﻿item,value_08d,value_chain
+calib_R2,0.191341150403038,
+resid_SD,3335.35588056242,
+n_cal,7854,
+tmrel_lo_mims,13168.4765682372,
+tmrel_hi_mims,13275.6693256004,
+tmrel_mid_08d,13222.0729469188,
+tmrel_mid_Table4,,13222.0729469188
+abs_diff,,3.63797880709171e-12

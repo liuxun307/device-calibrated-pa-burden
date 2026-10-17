@@ -1,0 +1,7 @@
+metric_definition,dropped_study,dropped_row,dropped_site,dropped_offset,ratio_off50,ratio_off75,ratio_off25
+LPA,Ekelund2019_harmonised,EK19_LPA_Q2,hip,25,1.70454545454545,2.02631578947368,
+LPA,Ekelund2019_harmonised,EK19_LPA_Q3,hip,50,,2.02631578947368,1.36666666666667
+LPA,Ekelund2019_harmonised,EK19_LPA_Q4,hip,75,1.70454545454545,,1.36666666666667
+LPA,UKB_wrist_general,SV25_LPA_Q2,wrist,25,1.70454545454545,2.02631578947368,
+LPA,UKB_wrist_general,SV25_LPA_Q3,wrist,50,,2.02631578947368,1.36666666666667
+LPA,UKB_wrist_general,SV25_LPA_Q4,wrist,75,1.70454545454545,,1.36666666666667
