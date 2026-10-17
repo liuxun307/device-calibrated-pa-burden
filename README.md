@@ -92,11 +92,11 @@ their presence and shape before any downstream step runs.
 
 | Manuscript item | File in `output/` |
 |---|---|
-| Table 1 (baseline) | `Table1_baseline_manuscript.csv` |
-| Table 2 (hazard ratios) | `Table2_hr_manuscript.csv` |
-| Table 3 (calibration + reporting bias) | `Table3_calibration.txt`, `Table3_reporting_bias.csv` |
-| Table 4 (recomputed vs GBD) | `Table4_burden_manuscript.csv` |
-| Table S1–S12 | `Table5_*` … `Table14_*`, `TableS4_*` (mapping in `docs/DATA_DICTIONARY.md`) |
+| Table S13 (baseline; former main-text Table 1) | `Table1_baseline_manuscript.csv` |
+| Table S14 (hazard ratios; former main-text Table 2) | `Table2_hr_manuscript.csv` |
+| Table S15 (calibration + reporting bias; former main-text Table 3 + 3b) | `Table3_calibration.txt`, `Table3_reporting_bias.csv` |
+| Table S16 (recomputed vs GBD; former main-text Table 4) | `Table4_burden_manuscript.csv` |
+| Table S1–S16 | `Table5_*` … `Table14_*`, `TableS4_*` (mapping in `docs/DATA_DICTIONARY.md`; former main-text Tables 1–4 moved to S13–S16 on 2026-10-17 — main text now carries figures only) |
 | Fig 1 | `figures/combined/Fig1.pdf`, `figures/panel/Fig1_study_design.*` |
 | Fig 2 | `Fig2a_flow_numbers.csv`, `Fig2b_exposure_summary.csv`, `Fig2c_crosstab_weighted.csv`; panels `Fig2a_screening_flow`, `Fig2b1_reported_density`, `Fig2b2_device_density`, `Fig2c_reported_vs_device_crosstab` |
 | Fig 3 | `Fig3_reference_points.csv`; panels `Fig3a–f` (6 panels) |

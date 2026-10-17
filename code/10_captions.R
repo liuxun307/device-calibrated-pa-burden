@@ -588,9 +588,9 @@ p("---")
 p("")
 
 # ============================== Table 1 ==============================
-p("## Table 1. Weighted baseline characteristics by device-measured activity quartile")
+p("### Table S13. Weighted baseline characteristics by device-measured activity quartile")
 p("")
-p("**Files / 文件**：`figures/tables/Table1_baseline.pdf`；`output/Table1_baseline_manuscript.csv`")
+p("**Files / 文件**：`figures/tables/TableS13_baseline.pdf`；`output/Table1_baseline_manuscript.csv`")
 p("")
 p(bi(
   sprintf(paste0("%s %s Continuous variables are ",
@@ -620,9 +620,9 @@ p("---")
 p("")
 
 # ============================== Table 2 ==============================
-p("## Table 2. Hazard ratios for device-measured activity and mortality")
+p("### Table S14. Hazard ratios for device-measured activity and mortality")
 p("")
-p("**Files / 文件**：`figures/tables/Table2_hazard_hrs.pdf`；`output/Table2_hr_manuscript.csv`")
+p("**Files / 文件**：`figures/tables/TableS14_hazard_ratios.pdf`；`output/Table2_hr_manuscript.csv`")
 p("")
 p(bi(
   sprintf("Survey-weighted Cox proportional-hazards models relating quartiles of device-measured total activity (MIMS/day) to all-cause and cardiovascular mortality, referenced to the exposure value equivalent to the GBD TMREL (%s MIMS/day, the %.0fth percentile of the exposure distribution) rather than to the lowest quartile. Model 1 is minimally adjusted (age, sex, race/ethnicity); Model 2 is fully adjusted (Model 1 plus education, poverty-income ratio, body-mass index, systolic blood pressure, smoking, alcohol use, diabetes and cardiovascular disease history). In the fully adjusted model the highest quartile showed an all-cause hazard ratio of %s and a cardiovascular hazard ratio of %s, with a significant trend across quartiles.",
@@ -643,9 +643,9 @@ p("---")
 p("")
 
 # ============================== Table 3 ==============================
-p("## Table 3. Calibration equation, reporting-bias factors and exposure SD relation")
+p("### Table S15. Calibration equation, reporting-bias factors and exposure SD relation")
 p("")
-p("**Files / 文件**：`figures/tables/Table3_calibration_coefficients.pdf`, `Table3b_reporting_bias.pdf`；`output/Table3_*`")
+p("**Files / 文件**：`figures/tables/TableS15a_calibration_coefficients.pdf`, `TableS15b_reporting_bias.pdf`；`output/Table3_*`")
 p("")
 if (!is.null(T3) && !is.null(T3B)) {
   p(bi(
@@ -668,15 +668,15 @@ if (!is.null(T3) && !is.null(T3B)) {
       sprintf("Reporting bias / 报告偏倚：达标组与未达标组的设备活动量仅差 %s MIMS/day（约 %.0f%%），远小于两者名义上的活动量差，说明自报的「达标」判定在设备尺度上几乎没有分辨力。",
               nf(rb_t - rb_f, 0), 100 * (rb_t / rb_f - 1)))
 } else {
-  p("（Table 3 产物缺失，待补。）")
+  p("（Table S15 产物缺失，待补。）")
 }
 p("---")
 p("")
 
 # ============================== Table 4 ==============================
-p("## Table 4. Recomputed versus GBD 2023 reported attributable burden (Global and representative countries)")
+p("### Table S16. Recomputed versus GBD 2023 reported attributable burden (Global and representative countries)")
 p("")
-p("**Files / 文件**：`figures/tables/Table4_recomputed_vs_gbd.pdf`；`output/Table4_burden_manuscript.csv`")
+p("**Files / 文件**：`figures/tables/TableS16_recomputed_vs_gbd.pdf`；`output/Table4_burden_manuscript.csv`")
 p("")
 p(bi(
   sprintf("Attributable deaths and DALYs for low physical activity, comparing this study's device-based recomputation with the burden reported by GBD 2023, for the global level and seven representative countries (Brazil, China, Germany, India, Japan, Nigeria and the United States) in 1990 and 2022. The recomputed burden exceeds the reported burden at every location and in both years (fold > 1); the global fold for deaths was %.1f in 1990 and %.1f in 2022. Folds are generally larger for deaths than for DALYs, and are largest in Nigeria (%.1f in 2022) and smallest in Brazil (%.1f).",
@@ -689,7 +689,7 @@ def("*fold* = recomputed / GBD 2023 reported。| fold = 本研究重算 ÷ GBD 2
     sprintf("Global 2022：PAF 本研究 %.3f vs GBD 2023 %.3f；归因死亡 %s vs %s。Global 1990：PAF %.3f vs %.3f；死亡 %s vs %s。",
             G22$`PAF (this study)`, G22$`PAF (GBD 2023)`, nf(T4_G22_D, 0), nf(T4_G22_G, 0),
             G90$`PAF (this study)`, G90$`PAF (GBD 2023)`, nf(T4_G90_D, 0), nf(T4_G90_G, 0)),
-    "本表为**主文结论表**；逐国全量版（204 国，按 SDI 排序）见 Table S12，对应图见 Fig 5(a)-(c)。",
+    "本表为**主结论表**（方案 A 下沉至补充材料）；逐国全量版（204 国，按 SDI 排序）见 Table S12，对应图见 Fig 5(a)-(c)。",
     "⚠️ 重算值为**确定性量**（遍历全部后验曲线，`E[PAF]` 口径，方差 0）：95 / 95c / 97 三处产出的同一量完全一致，不含抽样误差 —— 逐项对照见文末「口径一致性自检」。")
 p("---")
 p("")
@@ -697,8 +697,8 @@ p("")
 # ============================== 补充材料 ==============================
 p("## Supplementary material — 补充材料")
 p("")
-p("> **编号约定 / Numbering convention**：主文 Table 1–4 固定；下表把项目内部的 `Table5`–`Table14` / `TableS4` 文件映射为连续的补充表编号 S1–S12，**内部文件名保持不变**，下方每张补充表的表注均按此编号书写（映射已全量落地，S4 对应 `Table8_*`）。")
-p("> The main-text tables keep their stems; the internal stems in the table below are mapped to consecutive supplementary numbers S1-S12 and are unchanged on disk. Every supplementary caption in this document is written against this mapping.")
+p("> **编号约定 / Numbering convention**：主文只保留 **Fig 1–6**（无主文表）；原有主文 Table 1–4 于 2026-10-17 下沉为补充表 **S13–S16**（方案 A）。下表把项目内部的 `Table1`–`Table14` / `TableS4` 文件映射为连续的补充表编号 S1–S16，**内部文件名保持不变**，下方每张补充表的表注均按此编号书写。")
+p("> The main text carries figures only (Fig 1-6); the former main-text Tables 1-4 were moved to supplementary Tables S13-S16 on 2026-10-17 (option A). The internal stems in the table below are mapped to consecutive supplementary numbers S1-S16 and are unchanged on disk. Every supplementary caption in this document is written against this mapping.")
 p("")
 p("| Supplementary | Internal stem | Content | 内容 |")
 p("|---|---|---|---|")
@@ -714,6 +714,11 @@ p("| Table S9 | `Table12_*` | BoP leave-one-study-out | BoP 留一研究法 |")
 p("| Table S10 | `Table13_evalues` | E-values for unmeasured confounding | 未测混杂的 E 值 |")
 p("| Table S11 | `Table14_sdi_anchor` | SDI anchor table (205 locations x 1990/2022/2023 + official quintile) | SDI 锚点表（205 location × 三年 + 官方五分位） |")
 p("| Table S12 | `TableS4_burden_bycountry_manuscript` | Per-country burden comparison (204 countries, SDI-ordered) | 逐国负担对比（204 国，按 SDI 排序） |")
+p("")
+p("| **Table S13** | `Table1_baseline_manuscript` | Weighted baseline characteristics by device activity quartile (former main-text Table 1) | 基线特征（按设备四分位加权）—— 原主文 Table 1 |")
+p("| **Table S14** | `Table2_hr_manuscript` + `Table2_quartile_HK` | Hazard ratios per IQR and by quartile, two models (former main-text Table 2) | HR 表（每 IQR / 四分位，两模型）—— 原主文 Table 2 |")
+p("| **Table S15** | `Table3_calibration_coefs_manuscript` + `Table3_reporting_bias` + `Table3_sd_mean_relation_*` | Calibration coefficients (a), reporting-bias factors (b), exposure SD relation (c) (former main-text Table 3 + 3b) | 校准系数 (a)、报告偏倚因子 (b)、暴露 SD 关系 (c) —— 原主文 Table 3 + 3b |")
+p("| **Table S16** | `Table4_burden_manuscript` | Recomputed versus GBD 2023 burden, global and seven countries, 1990 and 2022 (former main-text Table 4) | 重算 vs GBD 负担（全球 + 7 国，1990/2022）—— 原主文 Table 4 |")
 p("")
 p("### Table S1. Pooled relative-risk curves from external cohorts (Burden of Proof)")
 p("")

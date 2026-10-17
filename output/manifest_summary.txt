@@ -1,6 +1,6 @@
 产物清单摘要
-生成时间 : 2026-10-16 22:39:32 
-运行 ID  : 20261016_223342 
+生成时间 : 2026-10-17 19:52:44 
+运行 ID  : 20261017_194903 
 项目根   : E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计 
 指纹算法 : sha256 
 
@@ -9,23 +9,23 @@
 1:     bop     13    0.25 MB
 2: derived     63   49.67 MB
 3:     gbd     31  162.80 MB
-4:  output    143    8.45 MB
+4:  output    144    8.45 MB
 5:     raw     74 1363.55 MB
 
 --- 交付物（output）---
                              rel_path   bytes  rows  cols             note
                                <char>   <num> <int> <int>           <char>
-  1:       CAPTIONS_figures_tables.md   76554    NA    NA caption/说明文档
+  1:       CAPTIONS_figures_tables.md   78975    NA    NA caption/说明文档
   2:      DRYRUN_module3_by_cause.csv   23826   160    11        table/csv
   3: DRYRUN_module3_exposure_diag.csv    2473    20     9        table/csv
   4:        DRYRUN_module3_totals.csv    1075     4    16        table/csv
   5:           Fig2a_flow_numbers.csv     138     4     4        table/csv
  ---                                                                      
-139:                 bop_rr_draws.rds 1326027    NA    NA                 
-140:      bop_rr_draws_withNHANES.rds 1454824    NA    NA                 
-141:             manifest_summary.txt    5552    NA    NA                 
-142:  reported_vs_device_crosstab.csv     246    16     3        table/csv
-143:                    rr_curves.csv   35910   400     6        table/csv
+140:                 bop_rr_draws.rds 1326027    NA    NA                 
+141:      bop_rr_draws_withNHANES.rds 1454824    NA    NA                 
+142:             manifest_summary.txt    5552    NA    NA                 
+143:  reported_vs_device_crosstab.csv     246    16     3        table/csv
+144:                    rr_curves.csv   35910   400     6        table/csv
 
 --- 原始数据（raw）---
                                  rel_path     bytes

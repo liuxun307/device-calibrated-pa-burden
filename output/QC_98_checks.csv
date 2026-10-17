@@ -186,7 +186,7 @@ D 交付产出,Fig6b_leave_one_out.pdf,PASS,34.244 KB
 D 交付产出,Fig6b_leave_one_out.png,PASS,79.717 KB
 D 交付产出,Fig6c_evalue.pdf,PASS,34.21 KB
 D 交付产出,Fig6c_evalue.png,PASS,89.235 KB
-D 交付产出,CAPTIONS_figures_tables.md,PASS,74.76 KB
+D 交付产出,CAPTIONS_figures_tables.md,PASS,77.124 KB
 D 交付产出（按需敏感性）,Table7_bop_nhanes_paf_impact.csv,PASS,5.7793 KB
 D 交付产出（按需敏感性）,Table7_bop_nhanes_paf_impact_by_cause.csv,PASS,0.62109 KB
 D 交付产出（按需敏感性）,QC_95_env_override_invariance.csv,PASS,0.27734 KB
@@ -197,6 +197,6 @@ D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_rr_source_compare.csv,PAS
 D 交付产出（按需敏感性）,PREVIEW_NHANES_s1p_rr_bridge.csv,PASS,0.54688 KB
 D 交付产出（按需敏感性）,VERIFY_default_totals.csv,PASS,8.5596 KB
 D 交付产出（按需敏感性）,VERIFY_default_by_cause.csv,PASS,209.81 KB
-D 交付产出,manifest.csv,PASS,324 条记录
+D 交付产出,manifest.csv,PASS,325 条记录
 D 交付产出,manifest 字节一致性,PASS,全部与清单一致（已按自指规则排除元产物 3 个）
-E 跨运行,产物指纹比对,PASS,对照 20261016_220245：一致 309，不一致 0；已豁免预期差异 14（PDF 时间戳 11 + 元产物自指 3 + 文档 0 + RDS 内容一致 0）；新增 1，消失 0
+E 跨运行,产物指纹比对,INFO,本次运行未包含 06_manifest.R（产物清单未重算），跨运行判定自动跳过 —— 否则会与上一次 run 的同一份清单逐字节相同而给出假绿 PASS。请运行完整链（或至少 06_manifest.R → 98）后再判定。

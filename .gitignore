@@ -14,6 +14,11 @@ logs/
 
 # ---- 不提交：未发表稿件（接收后再放开）----
 manuscript/
+submission_eClinMed/
+
+# ---- 不提交：工作区记忆与 R 会话垃圾 ----
+.workbuddy/
+code/Rplots.pdf
 
 # ---- 不提交：临时沙箱与探测文件 ----
 _smoketest/

@@ -69,8 +69,8 @@ t1 <- rbindlist(list(
              Q3 = ns[mims_q4 == "Q3", Deaths], Q4 = ns[mims_q4 == "Q4", Deaths]),
   t1))
 fwrite(t1, file.path(DIR_OUT, "Table1_baseline_manuscript.csv"), bom = TRUE)
-save_table_pdf(t1, "Table1_baseline",
-  title = "Table 1. Baseline characteristics of NHANES 2011-2014 adults with valid accelerometry, by device-measured activity quartile",
+save_table_pdf(t1, "TableS13_baseline",
+  title = "Table S13. Baseline characteristics of NHANES 2011-2014 adults with valid accelerometry, by device-measured activity quartile",
   footnote = paste0("Weighted means (SE) using NHANES MEC 4-year weights; N and Deaths are unweighted counts. ",
                     "Q1 = lowest activity quartile. Deaths are counted among the ",
                     fmt_n(sum(!is.na(t1d$died))), " participants with linked mortality follow-up; ",
@@ -175,8 +175,8 @@ t2 <- rbindlist(rows2)
 t2[, outcome := ifelse(outcome == "all_cause", "All-cause mortality", "Cardiovascular mortality")]
 t2[, model := ifelse(model == "minima", "Model 1 (minimally adjusted)", "Model 2 (fully adjusted)")]
 fwrite(t2, file.path(DIR_OUT, "Table2_hr_manuscript.csv"), bom = TRUE)
-save_table_pdf(t2, "Table2_hazard_ratios",
-  title = sprintf("Table 2. Hazard ratios (95%% CI) for device-measured activity (MIMS/day) and mortality, NHANES 2011-2014 (n = %s)", fmt_n(nrow(mod_dt))),
+save_table_pdf(t2, "TableS14_hazard_ratios",
+  title = sprintf("Table S14. Hazard ratios (95%% CI) for device-measured activity (MIMS/day) and mortality, NHANES 2011-2014 (n = %s)", fmt_n(nrow(mod_dt))),
   footnote = "Weighted Cox proportional hazards models (svycoxph); reference = lowest quartile. Model 1 adjusts for age, sex, race, education, poverty-income ratio, smoking, alcohol, diabetes, cardiovascular history; Model 2 additionally adjusts for BMI and systolic blood pressure.",
   width = 9.5)
 
@@ -198,13 +198,13 @@ bias[, n := fmt_n(n)]
 setnames(bias, c("meets_600", "mims_mean", "n"), c("Self-reported guideline status", "Device MIMS/day (mean)", "N"))
 t3 <- list(a = t3a, b = bias)
 fwrite(t3a, file.path(DIR_OUT, "Table3_calibration_coefs_manuscript.csv"), bom = TRUE)
-save_table_pdf(t3a, "Table3_calibration_coefficients",
-  title = "Table 3. Calibration model: device-measured activity (MIMS/day) regressed on self-reported MET-minutes/week",
+save_table_pdf(t3a, "TableS15a_calibration_coefficients",
+  title = "Table S15a. Calibration model: device-measured activity (MIMS/day) regressed on self-reported MET-minutes/week",
   footnote = sprintf("Linear model with natural cubic spline (3 df) on self-reported MET-min/week plus age-by-sex interaction; n = %s. R2 = %.3f; residual SD = %.0f. Monotonicity enforced by cumulative maximum for the MET->MIMS mapping used in Module 3.",
                      fmt_n(nrow(cal)), summary(m_cal)$r.squared, sd(residuals(m_cal))),
   width = 8.5)
-save_table_pdf(bias, "Table3b_reporting_bias",
-  title = "Table 3 (panel b). Reporting bias: device-measured activity by self-reported guideline status",
+save_table_pdf(bias, "TableS15b_reporting_bias",
+  title = "Table S15b. Reporting bias: device-measured activity by self-reported guideline status",
   footnote = "Self-reported meeting of the 600 MET-min/week guideline vs device-measured mean activity; the gap quantifies self-report overestimation.",
   width = 8)
 
@@ -225,8 +225,8 @@ t4 <- d4[order(year, factor(location, levels = c("Global", sort(setdiff(unique(l
            `Fold (deaths)` = sprintf("%.1f", recomputed_deaths / gbd_deaths),
            `Fold (DALYs)`  = sprintf("%.1f", recomputed_dalys / gbd_dalys))]
 fwrite(t4, file.path(DIR_OUT, "Table4_burden_manuscript.csv"), bom = TRUE)
-save_table_pdf(t4, "Table4_recomputed_vs_gbd",
-  title = "Table 4. Low-physical-activity-attributable burden: device-based recomputation vs GBD 2023 reported (pooled RR source)",
+save_table_pdf(t4, "TableS16_recomputed_vs_gbd",
+  title = "Table S16. Low-physical-activity-attributable burden: device-based recomputation vs GBD 2023 reported (pooled RR source)",
   footnote = "Eight study locations, 1990 and 2022. PAF = population-attributable fraction of deaths. Fold = this study / GBD 2023; the fold is a definitional-sensitivity quantity, not a claim of GBD underestimation (see Fig 5d decomposition).",
   width = 12.5, font_size = 7)
 

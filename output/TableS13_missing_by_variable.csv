@@ -1,0 +1,15 @@
+variable,label,n_total,n_missing,pct_missing,n_complete,note
+pir,家庭收入比 PIR,7854,587,7.47,7267,""
+sbp,收缩压 SBP,7854,218,2.78,7636,""
+bmi,BMI,7854,75,0.95,7779,""
+cvd_death,结局/随访 cvd_death（未链接到 NDI 死亡随访）,7854,12,0.15,7842,""
+died,结局/随访 died（未链接到 NDI 死亡随访）,7854,12,0.15,7842,""
+surv_mo,结局/随访 surv_mo（未链接到 NDI 死亡随访）,7854,12,0.15,7842,""
+educ,教育 educ,7854,7,0.09,7847,""
+age,年龄 age,7854,0,0,7854,无缺失
+cur_smoke,现吸烟 current smoking,7854,0,0,7854,无缺失
+cvd_hx,心血管病史 CVD history,7854,0,0,7854,无缺失
+diabetes,糖尿病 diabetes,7854,0,0,7854,无缺失
+drink_any,饮酒 any drinking,7854,0,0,7854,无缺失
+female,女性 female,7854,0,0,7854,无缺失
+race,种族/族裔 race/ethnicity,7854,0,0,7854,无缺失
