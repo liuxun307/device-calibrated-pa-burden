@@ -1766,6 +1766,35 @@ COI+致谢+清单提交）已在文末单列成表。
 **正文全局状态**：Methods 2.1–2.7 + Results R1–R6 + Discussion D1–D6 + Introduction P1–P4 + Abstract + 声明草稿
 **全部完稿**。剩余仅**用户输入**（5 项）与 2 项确认（Title、`[方法先例]` 引用）。
 
+## GitHub 上传包（2026-10-17）—— 作者信息定稿 + 仓库首次提交
+
+**本地已建库并提交**：`git log` = `06c6d7e Initial commit`，**304 文件 / 23.4 MB / 最大单文件 4.6 MB**（无需 LFS）。
+`git status` 干净；`git grep` 扫描确认**无本机绝对路径、无密钥、无个体级数据、无未发表稿件**。
+
+**根级新增文件**：
+
+| 文件 | 作用 |
+|---|---|
+| `README.md` | 英文门面：三模块说明 + 5.7 倍结论 + 目录结构 + Quick start（`00_setup` → `01_fetch_data` → `00_run_all` → 报告）+ 结果↔稿件映射 + 复现契约 + 许可 + 联系方式 |
+| `LICENSE` | MIT（代码）；附 scope note：数据不在 MIT 范围（NHANES 公有领域、GBD 受 IHME 条款、BoP 表来自文献） |
+| `CITATION.cff` | CFF 1.2.0，5 位作者，2 位 `corresponding: true` |
+| `docs/DATA_DICTIONARY.md` | 逐个 CSV 列字典；含两条口径警告（`M3_BYCOUNTRY` 必须 `rr_source=="pooled"` 且排除 `Global`；残差 SD 用 3,335 非 3,337） |
+| `docs/UPLOAD_CHECKLIST.md` | 纳入/排除清单 + 三条上传命令 + **GBD 不可再分发**边界 + 发表后 Zenodo 建议 |
+
+**`.gitignore` 扩充**（原已有 raw/derived/gbd/logs/_smoketest/*.log）：`data/scratch/`、`manuscript/`（未发表）、
+`tmp_probe/`、`data/bop/文献传递*·索取全文邮件*·_bak_*·_intake_extract/`、
+`00_完整研究方案.md`、`Module2_外部队列数据申请清单.md`、`data/bop/*入池裁定*.md`。
+
+**★ 首次 `git add -A` 后自查发现 3 个不该公开的文件**（`00_完整研究方案.md` 含 `D:\rtools45` 本机工具链路径与
+投稿时间线；`Module2_外部队列数据申请清单.md` 含申请策略；`data/bop/*入池裁定*.md` 引用内部申请单）
+→ `git rm --cached` 三者 + 扩 `.gitignore` + `--amend`。**教训：`git add -A` 之后必须跑一次"公开性三问"
+（含本机路径？含内部策略？含未发表内容？），不能只看体积。**
+
+**git 身份**：本仓库局部设为 `Xun Liu <liuxun@sj-hospital.org>`（原无全局配置）；如需改为个人账号，一行即可。
+
+**唯一剩余占位**：`<GITHUB-USERNAME>` 与仓库名 `device-calibrated-pa-burden`（§3 Data availability 两处、
+`CITATION.cff`、`README.md`、`docs/UPLOAD_CHECKLIST.md`）。上传只需 GitHub 建空库 → `git remote add` → `push -u`。
+
 ## 关键方法学约束（不要绕过）
 
 - 所有描述统计与模型**必须**带抽样权重与设计变量（`WTMEC4YR`、`SDMVPSU`、`SDMVSTRA`）。
