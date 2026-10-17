@@ -8,22 +8,20 @@
 
 ## 1. 已纳入版本控制（会出现在 GitHub）
 
+> **一句话**：push 的是**整个项目根目录** `E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计/` 中
+> **`.gitignore` 允许的 304 个文件（22.3 MB）**；被 `.gitignore` 排除的内容（原始数据、GBD 提取件、日志、稿件）**不会上传**。
+
 | 路径 | 体积 | 内容 | 为什么必须上传 |
 |---|---|---|---|
-| `code/` | ~1.2 MB | 45 个主链 R 脚本 + 14 个 tools + `README.md`（工程笔记） | 复现主体 |
-| `output/` | ~9 MB | 109 CSV + 13 PNG + 13 PDF + 5 TXT + 2 RDS + manifest/报告 | 论文全部数字的落盘来源 |
-| `figures/` | ~5.6 MB | `combined/`（14）+ `panel/`（48）+ `tables/`（表格图版） | 主图与面板，逐面板可重排 |
-| `data/sources/` | ~41 KB | NHANES 文件清单、SHA-256 台账、GBD 台账、官方读入程序 | 原始数据可复现的凭据 |
-| `data/bop/` | ~150 KB | BoP 提取表（22 行）、提取日志、入池裁定说明、README | **池化输入**（文献级汇总值，非版权全文） |
-| `data/external/` | ~7.2 MB | UN WPP 2024 人口（5 岁组×性别）+ OWID 人口 | M3 分母构造所需 |
-| `data/README.md` | 8 KB | 数据层规则 + GBD 手工获取步骤 | 新用户入口 |
-| `data/RAW_INVENTORY.csv` | 20 KB | 原始数据台账 | 溯源 |
-| `REPRODUCIBILITY.md` | — | 七步复现协议（中文） | 复现说明 |
-| `README.md` `LICENSE` `CITATION.cff` | — | 仓库门面 / MIT / 引用 | GitHub 规范 |
-| `docs/DATA_DICTIONARY.md` `docs/UPLOAD_CHECKLIST.md` | — | 数据字典 / 本文件 | 审稿人与读者 |
+| `code/` | 1.04 MB | 45 个主链 R 脚本 + 14 个 tools + `README.md`（工程笔记） | 复现主体 |
+| `output/` | 8.51 MB | 109 CSV + 13 PNG + 13 PDF + 5 TXT + 2 RDS + manifest/报告 | 论文全部数字的落盘来源 |
+| `figures/` | 5.38 MB | `combined/`（14）+ `panel/`（48）+ `tables/`（表格图版） | 主图与面板，逐面板可重排 |
+| `data/` | 7.30 MB | `sources/`（NHANES/GBD 清单与 SHA-256 台账）+ `bop/`（池化提取表）+ `external/`（UN WPP 2024 人口） | 原始数据可复现凭据 + 池化输入 + M3 分母 |
+| 根目录 5 个 | 0.02 MB | `README.md` `LICENSE` `CITATION.cff` `REPRODUCIBILITY.md` `.gitignore` | 仓库门面 / MIT / 引用 / 复现协议 |
+| `docs/` | 0.02 MB | `DATA_DICTIONARY.md` `UPLOAD_CHECKLIST.md` | 审稿人与读者 |
 
-**合计约 23.4 MB / 304 个文件，最大单文件 4.6 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
-→ 无需 Git LFS。
+**合计 304 个文件 / 22.3 MB，最大单文件 4.39 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
+→ 远低于 GitHub 硬限（单文件 100 MB），**无需 Git LFS**。
 
 ## 2. 不纳入版本控制（`.gitignore` 已排除）
 
@@ -102,8 +100,8 @@ git config --local credential.helper manager   # Windows 凭据管理器，之�
 
 | 检查项 | 结果 |
 |---|---|
-| 单文件是否 < 100 MB（GitHub 硬限） | ✅ 最大 4.6 MB（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`） |
-| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ 23.4 MB / 304 文件 |
+| 单文件是否 < 100 MB（GitHub 硬限） | ✅ 最大 4.39 MB（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`） |
+| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ **22.3 MB / 304 文件**（实算，2026-10-17） |
 | 是否含绝对路径（`E:\` / `C:\Users`） | ⚠️ `output/manifest.csv` 与部分 CSV 的表头注释可能含本机路径 → 已在 `docs/` 说明；如需彻底清除可跑 `code/tools/` 的清理脚本后再提交 |
 | 是否含 API key / 凭证 | ✅ 无（PAT 不入库，见 §4b） |
 | 是否含个体级可识别数据 | ✅ 无（NHANES 为去标识化公开数据，且未上传） |
