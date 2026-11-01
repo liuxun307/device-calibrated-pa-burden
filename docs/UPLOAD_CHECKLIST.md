@@ -9,7 +9,7 @@
 ## 1. 已纳入版本控制（会出现在 GitHub）
 
 > **一句话**：push 的是**整个项目根目录** `E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计/` 中
-> **`.gitignore` 允许的 331 个文件（23.5 MB）**；被 `.gitignore` 排除的内容（原始数据、GBD 提取件、日志、稿件、投稿包）**不会上传**。
+> **`.gitignore` 允许的 332 个文件（23.7 MB）**；被 `.gitignore` 排除的内容（原始数据、GBD 提取件、日志、稿件、投稿包）**不会上传**。
 
 | 路径 | 体积 | 内容 | 为什么必须上传 |
 |---|---|---|---|
@@ -20,7 +20,7 @@
 | 根目录 5 个 | 0.02 MB | `README.md` `LICENSE` `CITATION.cff` `REPRODUCIBILITY.md` `.gitignore` | 仓库门面 / MIT / 引用 / 复现协议 |
 | `docs/` | 0.02 MB | `DATA_DICTIONARY.md` `UPLOAD_CHECKLIST.md` | 审稿人与读者 |
 
-**合计 331 个文件 / 23.5 MB，最大单文件 4.39 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
+**合计 332 个文件 / 23.7 MB，最大单文件 4.39 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
 → 远低于 GitHub 硬限（单文件 100 MB），**无需 Git LFS**。
 
 ## 2. 不纳入版本控制（`.gitignore` 已排除）
@@ -104,7 +104,7 @@ git config --local credential.helper manager   # Windows 凭据管理器，之�
 | 检查项 | 结果 |
 |---|---|
 | 单文件是否 < 100 MB（GitHub 硬限） | ✅ 最大 4.39 MB（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`） |
-| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ **23.5 MB / 331 文件**（实算，2026-11-01） |
+| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ **23.7 MB / 332 文件**（实算，2026-11-01） |
 | 是否含绝对路径（`E:\` / `C:\Users`） | ⚠️ `output/manifest.csv` 与部分 CSV 的表头注释可能含本机路径 → 已在 `docs/` 说明；如需彻底清除可跑 `code/tools/` 的清理脚本后再提交 |
 | 是否含 API key / 凭证 | ✅ 无（PAT 不入库，见 §4b） |
 | 是否含个体级可识别数据 | ✅ 无（NHANES 为去标识化公开数据，且未上传） |
