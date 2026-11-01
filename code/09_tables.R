@@ -262,8 +262,8 @@ if (!file.exists(f_byc)) {
     `Fold (deaths)` = sprintf("%.1f", fold_deaths),
     `Fold (DALYs)`  = sprintf("%.1f", fold_dalys))]
   fwrite(s4, file.path(DIR_OUT, "TableS4_burden_bycountry_manuscript.csv"), bom = TRUE)
-  save_table_pdf(s4, "TableS4_recomputed_vs_gbd_bycountry",
-    title = "Table S4. Low-physical-activity-attributable burden by country: device-based recomputation vs GBD 2023 reported (pooled RR source)",
+  save_table_pdf(s4, "TableS12_burden_bycountry",
+    title = "Table S12. Low-physical-activity-attributable burden by country: device-based recomputation vs GBD 2023 reported (pooled RR source)",
     footnote = paste0("All 205 GBD 2023 locations (Global + 204 countries), 1990 and 2022, ordered by SDI quintile ",
                       "(official GBD 2023 cut-points, 2023 SDI) then descending 2022 SDI. ",
                       "PAF = population-attributable fraction of deaths. Fold = this study / GBD 2023; ",

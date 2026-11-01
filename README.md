@@ -53,7 +53,8 @@ threshold — explain the gap to within a residual multiplier of **×1.007**.
 ├── output/                   # result tables (CSV), manifest, reproducibility report
 ├── docs/
 │   ├── DATA_DICTIONARY.md    # every released CSV, column by column
-│   └── UPLOAD_CHECKLIST.md   # what is (and is not) in this repo, and why
+│   ├── UPLOAD_CHECKLIST.md   # what is (and is not) in this repo, and why
+│   └── GITHUB_UPLOAD_GUIDE.md # step-by-step push procedure (PAT, proxy, verification)
 ├── REPRODUCIBILITY.md        # the reproduction protocol (Chinese, step by step)
 └── LICENSE                   # MIT (code); see §6 for data
 ```

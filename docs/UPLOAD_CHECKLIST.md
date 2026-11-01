@@ -9,18 +9,18 @@
 ## 1. 已纳入版本控制（会出现在 GitHub）
 
 > **一句话**：push 的是**整个项目根目录** `E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计/` 中
-> **`.gitignore` 允许的 304 个文件（22.3 MB）**；被 `.gitignore` 排除的内容（原始数据、GBD 提取件、日志、稿件）**不会上传**。
+> **`.gitignore` 允许的 331 个文件（23.5 MB）**；被 `.gitignore` 排除的内容（原始数据、GBD 提取件、日志、稿件、投稿包）**不会上传**。
 
 | 路径 | 体积 | 内容 | 为什么必须上传 |
 |---|---|---|---|
-| `code/` | 1.04 MB | 45 个主链 R 脚本 + 14 个 tools + `README.md`（工程笔记） | 复现主体 |
+| `code/` | 1.3 MB | 47 个主链 R 脚本 + 24 个 `tools/`（含建包与审查脚本）+ `README.md`（工程笔记） | 复现主体 |
 | `output/` | 8.51 MB | 109 CSV + 13 PNG + 13 PDF + 5 TXT + 2 RDS + manifest/报告 | 论文全部数字的落盘来源 |
 | `figures/` | 5.38 MB | `combined/`（14）+ `panel/`（48）+ `tables/`（表格图版） | 主图与面板，逐面板可重排 |
 | `data/` | 7.30 MB | `sources/`（NHANES/GBD 清单与 SHA-256 台账）+ `bop/`（池化提取表）+ `external/`（UN WPP 2024 人口） | 原始数据可复现凭据 + 池化输入 + M3 分母 |
 | 根目录 5 个 | 0.02 MB | `README.md` `LICENSE` `CITATION.cff` `REPRODUCIBILITY.md` `.gitignore` | 仓库门面 / MIT / 引用 / 复现协议 |
 | `docs/` | 0.02 MB | `DATA_DICTIONARY.md` `UPLOAD_CHECKLIST.md` | 审稿人与读者 |
 
-**合计 304 个文件 / 22.3 MB，最大单文件 4.39 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
+**合计 331 个文件 / 23.5 MB，最大单文件 4.39 MB**（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`）
 → 远低于 GitHub 硬限（单文件 100 MB），**无需 Git LFS**。
 
 ## 2. 不纳入版本控制（`.gitignore` 已排除）
@@ -46,23 +46,26 @@
 - **BoP 提取表**（`data/bop/rr_table.csv`）：由已发表论文的**汇总估计值**转录而成（非全文、非个体数据），
   属常见做法，但须在正文/README 注明来源研究并要求引用原文（已在 `data/bop/README.md` 逐行标注）。
 
-## 4. 上传步骤（三条命令 + 一次网页操作）
+## 4. 上传步骤
+
+> **状态（2026-11-01）**：本仓库**已初始化**（`main` 分支、5 个本地 commit、远程 `origin` 已配置），
+> 因此**不再需要** `git init` / `git remote add`。现在只剩「提交本轮改动 + push」两步。
+> **完整可执行流程见 [`docs/GITHUB_UPLOAD_GUIDE.md`](GITHUB_UPLOAD_GUIDE.md)**（含 PAT、代理、SSH、故障排查）。
+
+最小命令序列：
 
 ```bash
-# 1) 在项目根目录初始化并提交（.gitignore 已就位，自动排除大文件）
 cd "E:/WorkBuddy/2026-10-11-00-17-56/范式A_低体力活动_加速度计"
-git init -b main
+
+# 1) 提交前自查：稿件与投稿包必须被忽略；无 >50 MB 文件
+git status --short
+git check-ignore -v "投稿包_eClinMed_2026-11-01/01_Main_Manuscript.docx"
+
+# 2) 提交
 git add -A
-git commit -m "Initial commit: device-calibrated burden of low physical activity (analysis pipeline + derived results)"
+git commit -m "Release v1.0.0: submission-ready pipeline, abstract trimmed to 249 words, package build scripts"
 
-# 2) 检查将要上传的内容与体积（务必看一遍）
-git count-objects -vH
-git ls-files | wc -l
-```
-
-```bash
-# 3) 在 GitHub 网页新建空仓库（不要勾选 README/LICENSE），然后：
-git remote add origin https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden.git
+# 3) 推送（密码位置填 PAT）
 git push -u origin main
 ```
 
@@ -101,7 +104,7 @@ git config --local credential.helper manager   # Windows 凭据管理器，之�
 | 检查项 | 结果 |
 |---|---|
 | 单文件是否 < 100 MB（GitHub 硬限） | ✅ 最大 4.39 MB（`data/external/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz`） |
-| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ **22.3 MB / 304 文件**（实算，2026-10-17） |
+| 仓库总体积是否 < 1 GB（推荐 < 100 MB） | ✅ **23.5 MB / 331 文件**（实算，2026-11-01） |
 | 是否含绝对路径（`E:\` / `C:\Users`） | ⚠️ `output/manifest.csv` 与部分 CSV 的表头注释可能含本机路径 → 已在 `docs/` 说明；如需彻底清除可跑 `code/tools/` 的清理脚本后再提交 |
 | 是否含 API key / 凭证 | ✅ 无（PAT 不入库，见 §4b） |
 | 是否含个体级可识别数据 | ✅ 无（NHANES 为去标识化公开数据，且未上传） |

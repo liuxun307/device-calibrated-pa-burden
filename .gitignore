@@ -13,8 +13,15 @@ data/scratch/
 logs/
 
 # ---- 不提交：未发表稿件（接收后再放开）----
+# manuscript/ 与 submission_eClinMed/ 含未发表稿件与内部中文底稿；
+# 投稿包是组装产物，同样不得进入公开仓库（否则等于预印本公开，违反期刊首发政策）。
 manuscript/
 submission_eClinMed/
+投稿包_eClinMed_*/
+投稿包_*/
+*_AUDIT.md
+_审查报告*
+_投稿要求核对*
 
 # ---- 不提交：工作区记忆与 R 会话垃圾 ----
 .workbuddy/

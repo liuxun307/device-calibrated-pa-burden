@@ -88,7 +88,10 @@ abx = section_text(ab, "Abstract（eClinicalMedicine")
 kw  = section_text(ab, "Key words")
 P.append(strip_chinese(tr)); P.append("")
 P.append(strip_chinese(abx)); P.append("")
-P.append(strip_chinese(kw))
+_kw = " ".join(strip_chinese(kw).split())
+if _kw and not _kw.lower().startswith("keywords"):
+    _kw = "**Keywords:** " + _kw
+P.append(_kw)
 
 # --- Introduction ---
 P.append("# Introduction\n")
@@ -142,6 +145,25 @@ P.append(extract_english(section_text(d5, "D5 Limitations")))
 P.append("\n## Conclusion\n")
 P.append(extract_english(section_text(dd, "D6 Conclusion")))
 
+# --- Declarations（eClinicalMedicine 强制：伦理/数据/代码/资助/利益/分工/报告规范） ---
+decl = read(os.path.join(MAN, "声明与补充材料_草稿_中英对照.md"))
+P.append("\n# Declarations\n")
+for h, t in [("1. Ethics approval", "Ethics approval and consent to participate"),
+             ("2. Consent for publication", "Consent for publication"),
+             ("3. Data availability", "Data availability"),
+             ("4. Code availability", "Code availability"),
+             ("5. Funding", "Funding"),
+             ("6. Competing interests", "Declaration of interests"),
+             ("7. Author contributions", "Author contributions"),
+             ("7b. Declaration of generative AI", "Declaration of generative AI and AI-assisted technologies in the writing process"),
+             ("8. Acknowledgements", "Acknowledgements"),
+             ("9. Reporting guidelines", "Reporting guidelines")]:
+    body = extract_english(section_text(decl, h))
+    if not body.strip():
+        continue
+    P.append("\n## %s\n" % t)
+    P.append(body)
+
 main = "\n".join(P)
 write(os.path.join(SUB, "manuscript", "02_Main_Manuscript.md"), main)
 
@@ -153,6 +175,7 @@ for ln in lines:
     s = ln.strip()
     if not s or s.startswith(("#", "###", "---")): continue
     if s.startswith("<br/>"):  continue          # 中文/说明注释行
+    if s.startswith(">"):      continue          # blockquote 内部工作笔记，绝不入稿
     if s.startswith("**注**"): continue
     if re.match(r"^\d+\.", s) or (keep and not s.startswith(("→", "**"))):
         if s.startswith("→") or s.startswith("**→"): continue
@@ -186,18 +209,37 @@ write(os.path.join(SUB, "supplementary", "Declarations_声明.md"),
       "# Declarations\n\n" + "\n\n".join(dec_out))
 
 # ============================== 5. 图 / 表 / 清单 ============================
+# 图片复制容错：目标文件若被查看器占用（Windows 文件锁），跳过并提示，
+# 因为图片内容本身未变、提交包内已有同名副本。文字稿件不受影响。
 FIG = os.path.join(ROOT, "figures")
+SKIPPED = []
+def _copy(src, dst):
+    try:
+        shutil.copy(src, dst)
+    except PermissionError:
+        SKIPPED.append(dst)
+
+# 主图来源名 -> 投稿显示名的映射。Fig5 在 combined/ 下没有 Fig5.pdf，
+# 只有拼版 Fig5_a_b_c_d.pdf（4 面板，正文 Fig 5(c) 即引自此版）。
+FIG_SRC = {
+    1: "Fig1", 2: "Fig2", 3: "Fig3", 4: "Fig4",
+    5: "Fig5_a_b_c_d",
+    6: "Fig6",
+}
 for i in range(1, 7):
+    src_stem = FIG_SRC.get(i, "Fig%d" % i)
     for ex in ("pdf", "png"):
-        src = os.path.join(FIG, "combined", "Fig%d.%s" % (i, ex))
+        src = os.path.join(FIG, "combined", "%s.%s" % (src_stem, ex))
         if os.path.exists(src):
-            shutil.copy(src, os.path.join(SUB, "figures", "Fig%d.%s" % (i, ex)))
+            _copy(src, os.path.join(SUB, "figures", "Fig%d.%s" % (i, ex)))
+        else:
+            SKIPPED.append("MISSING Fig%d <- %s.%s" % (i, src_stem, ex))
 # 备选拼版
 for nm in ("Fig3_combined_4panels", "Fig6_combined_2panels"):
     for ex in ("pdf", "png"):
         src = os.path.join(FIG, "combined", "%s.%s" % (nm, ex))
         if os.path.exists(src):
-            shutil.copy(src, os.path.join(SUB, "figures", nm + "." + ex))
+            _copy(src, os.path.join(SUB, "figures", nm + "." + ex))
 # 表（S1–S16 的 PDF/PNG，来自 figures/tables）
 tabdir = os.path.join(FIG, "tables")
 if os.path.isdir(tabdir):
@@ -218,4 +260,18 @@ shutil.copy(os.path.join(MAN, "STROBE_GATHER_清单_eClinMed.md"),
             os.path.join(SUB, "checklists", "GATHER_checklist.md"))
 
 print("主稿词数检查（英文段，含标题）:", len(re.findall(r"[A-Za-z][A-Za-z'\-]*", main)))
+
+# 投稿包完整性硬校验：缺图 / 缺表必须报警，不得静默通过
+HARD = [s for s in SKIPPED if str(s).startswith("MISSING")]
+if HARD:
+    print("\n!!! 投稿包缺失（必须修复后重跑）!!!")
+    for s in HARD:
+        print("   ", s)
+if SKIPPED:
+    print("\n占位跳过（文件被占用，多为此前生成物仍打开）:", len(SKIPPED))
+    for s in SKIPPED:
+        if not str(s).startswith("MISSING"):
+            print("   ", s)
+if not HARD:
+    print("图/表完整性: 全部到位")
 print("完成 -> submission_eClinMed/")
