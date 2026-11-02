@@ -69,6 +69,14 @@ def check_files(pkg):
     add("PASS" if len(figs) == 6 else "FAIL", "主图 PDF 数量 = 6", "实际 %d：%s" % (len(figs), sorted(figs)))
     csvs = [f for f in os.listdir(os.path.join(pkg, "Data_Tables_CSV")) if f.lower().endswith(".csv")]
     add("PASS" if csvs else "FAIL", "机器可读数据表", "%d 个 CSV" % len(csvs))
+    pdfs = sorted(f for f in os.listdir(os.path.join(pkg, "Supplementary_PDF")) if f.lower().endswith(".pdf"))
+    allowed = {
+        "TableS12_burden_bycountry", "TableS13_baseline", "TableS14_hazard_ratios",
+        "TableS15a_calibration_coefficients", "TableS15b_reporting_bias", "TableS16_recomputed_vs_gbd",
+    }
+    extra_pdf = sorted({os.path.splitext(f)[0] for f in pdfs} - allowed)
+    add("PASS" if not extra_pdf else "FAIL", "补充 PDF 编号与 S12-S16 一致",
+        "\u591a\u4f59/\u65e7\u7f16\u53f7 %s" % extra_pdf if extra_pdf else "%d \u4e2a\uff0c\u65e0\u91cd\u590d" % len(pdfs))
     chk = os.listdir(os.path.join(pkg, "Checklists"))
     add("PASS" if len([f for f in chk if f.endswith(".docx")]) == 2 else "FAIL",
         "STROBE + GATHER 清单", ", ".join(sorted(chk)))
@@ -176,8 +184,8 @@ def check_cover_letter(pkg):
     _, cl = read_docx_text(os.path.join(pkg, "00_Cover_Letter.docx"))
     for s in ["eClinicalMedicine", "5.7", "STROBE", "GATHER", "competing interests", "funding"]:
         add("PASS" if s in cl else "WARN", "Cover Letter 含「%s」" % s)
-    add("WARN" if "to be completed" in cl else "PASS", "推荐审稿人一栏需作者填写",
-        "仍为占位符" if "to be completed" in cl else "已填写")
+    add("WARN" if "to be completed" in cl else "PASS", "推荐审稿人一栏已处理",
+        "仍为占位符" if "to be completed" in cl else "已填写或声明不推荐（2026-11-02 作者决定不填）")
 
 
 def check_checklists(pkg):

@@ -93,11 +93,17 @@ def main():
 
     # ---- 3. 补充表印刷版 PDF ----
     # 2026-11-01：09_tables.R 已把逐国表改名为 TableS12_burden_bycountry，
-    # 与补充表编号一致，故不再排除；旧名 TableS4_recomputed_vs_gbd_bycountry 已废弃。
+    # 与补充表编号一致。旧名 TableS4_recomputed_vs_gbd_bycountry 的遗留产物
+    # 已从 figures/tables/ 与 submission_eClinMed/supplementary/ 删除。
+    # 下列断言防止旧编号文件再次混入（会是同一张 204 国表的第二份副本）。
     nsup, skipped_pdf = 0, []
     sdir = os.path.join(B.SUB, "supplementary")
     for f in sorted(os.listdir(sdir)):
         if f.lower().endswith(".pdf"):
+            if f.startswith("TableS4_"):
+                skipped_pdf.append(f)
+                print("  !! 跳过旧编号产物: %s（应为 TableS12_burden_bycountry）" % f)
+                continue
             if copy(os.path.join(sdir, f), os.path.join(SUP_DIR, f)):
                 nsup += 1
 
