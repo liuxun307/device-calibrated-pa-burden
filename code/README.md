@@ -1792,8 +1792,8 @@ COI+致谢+清单提交）已在文末单列成表。
 
 **git 身份**：本仓库局部设为 `Xun Liu <liuxun@sj-hospital.org>`（原无全局配置）；如需改为个人账号，一行即可。
 
-**仓库地址（已定，2026-10-17）**：`liuxun-sj-hospital` / `device-calibrated-pa-burden` →
-`https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden`（已同步至 §3 Data availability 两处、
+**仓库地址（已定，2026-10-17）**：`liuxun307` / `device-calibrated-pa-burden` →
+`https://github.com/liuxun307/device-calibrated-pa-burden`（已同步至 §3 Data availability 两处、
 `CITATION.cff`、`docs/UPLOAD_CHECKLIST.md`）。上传只需 GitHub 建空库 → `git remote add` → `push -u`；
 口令用 **Personal Access Token**，不用账号登录密码。
 

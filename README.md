@@ -143,7 +143,7 @@ timestamp; their content identity is established by the corresponding PNG (byte-
 ```
 Zhang Z, Liu H, Zhao Z, Zhao Y, Liu X. Device-calibrated burden of low physical activity
 (analysis pipeline and derived results). GitHub repository, 2026.
-https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden
+https://github.com/liuxun307/device-calibrated-pa-burden
 ```
 
 ## 8. Contact

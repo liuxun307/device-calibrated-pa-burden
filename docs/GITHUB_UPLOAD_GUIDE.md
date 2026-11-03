@@ -76,7 +76,7 @@ git config http.proxy  http://127.0.0.1:7890
 git config https.proxy http://127.0.0.1:7890
 
 # 验证
-git ls-remote https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden.git
+git ls-remote https://github.com/liuxun307/device-calibrated-pa-burden.git
 ```
 
 **若用 SSH 而不是 HTTPS**（可选，免去每次输 PAT）：
@@ -85,8 +85,8 @@ git ls-remote https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden.
 ssh-keygen -t ed25519 -C "liuxun@sj-hospital.org"     # 一路回车
 cat ~/.ssh/id_ed25519.pub                              # 复制内容
 # GitHub → Settings → SSH and GPG keys → New SSH key → 粘贴
-ssh -T git@github.com                                  # 看到 "Hi liuxun-sj-hospital!" 即成功
-git remote set-url origin git@github.com:liuxun-sj-hospital/device-calibrated-pa-burden.git
+ssh -T git@github.com                                  # 看到 "Hi liuxun307!" 即成功
+git remote set-url origin git@github.com:liuxun307/device-calibrated-pa-burden.git
 ```
 
 > 国内 SSH 的 22 端口常被拦。若 `ssh -T` 卡住，改用 HTTPS + PAT，或配置 `~/.ssh/config` 走 443 端口：
@@ -132,7 +132,7 @@ git commit -m "Release v1.0.0: submission-ready pipeline, abstract trimmed to 24
 
 # 4.4 推送（首次会提示输入用户名与密码）
 git push -u origin main
-#    Username: liuxun-sj-hospital
+#    Username: liuxun307
 #    Password: 粘贴 PAT（ghp_...，不显示字符是正常的）
 ```
 

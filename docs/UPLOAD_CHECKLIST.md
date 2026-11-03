@@ -69,18 +69,18 @@ git commit -m "Release v1.0.0: submission-ready pipeline, abstract trimmed to 24
 git push -u origin main
 ```
 
-> **账号与仓库地址已确定（2026-10-17）**：`liuxun-sj-hospital` / `device-calibrated-pa-burden`。
+> **账号与仓库地址已确定（2026-10-17）**：`liuxun307` / `device-calibrated-pa-burden`。
 > 已在 `CITATION.cff`、`manuscript/Title_Page_投稿用.md`、`manuscript/声明与补充材料_草稿_中英对照.md` 三处同步。
 > 首次 `push` 时请用 **Personal Access Token（PAT）作为密码**，不要输入 GitHub 登录密码（见 §4b）。
 
 ## 4b. 首次 push 的认证方式（**不要用登录密码**）
 
 GitHub 自 2021-08 起已关闭 HTTPS 密码推送，`git push` 提示 `Password for 'https://...'` 时：
-**账号填 `liuxun-sj-hospital`，密码填 Personal Access Token（PAT）**，不是 GitHub 登录密码。
+**账号填 `liuxun307`，密码填 Personal Access Token（PAT）**，不是 GitHub 登录密码。
 
 ① 网页右上头像 → Settings → Developer settings → Personal access tokens → **Tokens (classic)** →
 Generate new token → 勾选 `repo`（若仓库含 Actions 再加 `workflow`）→ 有效期建议 30 天 → 复制 `ghp_...`（只显示一次）。  
-② 推送：`git push -u origin main`，用户名 `liuxun-sj-hospital`，密码粘贴 PAT。  
+② 推送：`git push -u origin main`，用户名 `liuxun307`，密码粘贴 PAT。  
 ③ 提示 `remote: Support for password authentication was removed` = 第 ② 步填了登录密码，重来一次即可。  
 ④ 推荐在**本仓库局部**保存凭据，避免写入全局：
 
@@ -116,7 +116,7 @@ git config --local credential.helper manager   # Windows 凭据管理器，之�
 稿件 Data availability 建议表述（英文）：
 
 > All derived datasets and the complete analysis code are available at
-> https://github.com/liuxun-sj-hospital/device-calibrated-pa-burden (archived at Zenodo, DOI: …).
+> https://github.com/liuxun307/device-calibrated-pa-burden (archived at Zenodo, DOI: …).
 > NHANES 2011–2014 data are publicly available from CDC/NCHS; GBD 2023 estimates are available from the
 > GBD Results Tool (IHME). Raw third-party data are not redistributed.
 
